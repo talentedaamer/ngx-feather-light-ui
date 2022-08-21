@@ -1,0 +1,35 @@
+<form [formGroup]="fakeForm">
+  <flui-input
+    name="fname"
+    id="fname"
+    label="First Name"
+    placeholder="Enter First Name..."
+    [errorMessages]="errorMessages"
+    formControlName="firstName"></flui-input>
+
+  <flui-input
+    label="Last Name"
+    placeholder="Enter Last Name..."
+    [required]="true"
+    [errorMessages]="errorMessages"
+    formControlName="lastName"></flui-input>
+
+  <flui-input
+    type="password"
+    label="Password"
+    placeholder="Enter Password..."
+    [disabled]="true"
+    formControlName="password"></flui-input>
+
+  <flui-checkbox
+  label="Active"
+  formControlName="active"></flui-checkbox>
+
+  <flui-button [disabled]="!fakeForm.valid" (isClicked)="isBtnClicked($event)" text="Submit"></flui-button>
+  <flui-button type="success" (isClicked)="isBtnClicked($event)" text="Add"></flui-button>
+  <flui-button type="danger" (isClicked)="isBtnClicked($event)" text="Cancel"></flui-button>
+
+  <pre>value => {{ fakeForm.value | json }}</pre>
+  <pre>Valid => {{ fakeForm.valid | json }}</pre>
+
+</form>

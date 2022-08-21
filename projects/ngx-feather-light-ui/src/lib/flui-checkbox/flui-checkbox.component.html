@@ -1,0 +1,9 @@
+<div [ngClass]="checkboxClasses" (click)="checkboxSelectionChange()">
+  <input
+    type="checkbox"
+   name="{{name}}"
+   id="{{id}}"
+   [disabled]="disabled"
+   [ngModel]="checked">
+  <div class="label">{{label}}</div>
+</div>

@@ -1,0 +1,41 @@
+:host .flui-input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+:host .flui-input-wrap > label {
+  margin-bottom: .25rem;
+  font-size: .875rem;
+}
+
+:host .flui-input-wrap > input {
+  padding: .5rem .625rem;
+  border-radius: .25rem;
+  border: 1px solid #b9b8b8;
+  outline: none;
+}
+
+:host .flui-input-wrap > input:focus,
+:host .flui-input-wrap > input:hover {
+  border-color: #000;
+}
+
+:host .flui-input-wrap.flui-invalid > input {
+  border-color: #cc0000;
+}
+
+:host .flui-input-wrap.flui-disabled > input {
+  opacity: 0.6;
+}
+
+:host .flui-input-wrap.flui-invalid > input::placeholder,
+:host .flui-input-wrap.flui-invalid > label,
+:host .flui-input-wrap .flui-errors-wrap {
+  color: #cc0000;
+}
+
+:host .flui-input-wrap .flui-errors-wrap .flui-error-item {
+  margin-top: .125rem;
+  font-size: .75rem;
+}

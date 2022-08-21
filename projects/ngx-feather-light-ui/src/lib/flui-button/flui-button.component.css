@@ -1,0 +1,35 @@
+:host .flui-button {
+  padding: .5rem .625rem;
+  border-radius: .25rem;
+  border: 1px solid #b9b8b8;
+  margin-bottom: 1rem;
+}
+
+:host .flui-button:focus,
+:host .flui-button:hover {
+  border-color: #000;
+}
+
+:host .flui-button.flui-button-variant-base {}
+:host .flui-button.flui-button-variant-outline {}
+:host .flui-button.flui-button-variant-link {}
+
+:host .flui-button.flui-button-type-primary {
+  background: #4198FF;
+  border-color: #4198FF;
+  color: #ffffff;
+}
+:host .flui-button.flui-button-type-success {
+  background: #157347;
+  border-color: #146c43;
+  color: #ffffff;
+}
+:host .flui-button.flui-button-type-danger {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+:host .flui-button.flui-disabled {
+  opacity: 0.6;
+}
