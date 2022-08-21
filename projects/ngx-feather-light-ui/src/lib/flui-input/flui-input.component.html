@@ -1,0 +1,19 @@
+<div [ngClass]="inputClasses">
+  <label for="{{id}}" class="flui-label" *ngIf="label !== ''">{{label}}</label>
+  <input
+    id="{{id}}"
+    name="{{name}}"
+    type="{{type}}"
+    placeholder="{{placeholder}}"
+    [required]="required"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    (keydown)="_onTouched()"
+    (blur)="_onTouched()"/>
+
+  <ng-container *ngIf="errorState">
+    <div class="cui-errors-wrap" *ngFor="let error of errors">
+      <small class="cui-error-item">{{error}}</small>
+    </div>
+  </ng-container>
+</div>
