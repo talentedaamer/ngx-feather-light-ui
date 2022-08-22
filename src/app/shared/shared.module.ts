@@ -13,12 +13,16 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { FluiInputModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-input/flui-input.module";
 import { FluiButtonModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-button/flui-button.module";
-import {FluiCheckboxModule} from "../../../projects/ngx-feather-light-ui/src/lib/flui-checkbox/flui-checkbox.module";
-import {FluiCardDirective} from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-card.directive";
+import { FluiCheckboxModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-checkbox/flui-checkbox.module";
+import { FluiCardDirective } from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-card.directive";
+import {
+  FluiMessageDirective
+} from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-message.directive";
 
 @NgModule({
   declarations: [
     FluiCardDirective,
+    FluiMessageDirective,
   ],
   imports: [
     CommonModule,
@@ -36,6 +40,7 @@ import {FluiCardDirective} from "../../../projects/ngx-feather-light-ui/src/lib/
     FluiButtonModule,
     FluiCheckboxModule,
     FluiCardDirective,
+    FluiMessageDirective,
   ]
 })
 export class SharedModule { }

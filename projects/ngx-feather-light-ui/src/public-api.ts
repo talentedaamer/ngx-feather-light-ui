@@ -23,5 +23,6 @@ export * from './lib/flui-checkbox/flui-checkbox.module';
 /**
  * directives
  */
-export * from './lib/directives/flui-directives.module';
-export * from './lib/directives/flui-card.directive'
+// export * from './lib/directives/flui-directives.module';
+export * from './lib/flui-directives/flui-card.directive'
+export * from './lib/flui-directives/flui-message.directive';
