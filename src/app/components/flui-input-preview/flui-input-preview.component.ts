@@ -17,7 +17,8 @@ export class FluiInputPreviewComponent {
     firstName: ['Muhammad', Validators.required ],
     lastName: ['Ibrahim'],
     password: ['password'],
-    active: [false, Validators.requiredTrue]
+    activeProfile: [false, Validators.requiredTrue],
+    rememberPassword: [true],
   })
 
   constructor(

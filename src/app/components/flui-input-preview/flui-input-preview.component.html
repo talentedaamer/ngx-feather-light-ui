@@ -22,14 +22,33 @@
     formControlName="password"></flui-input>
 
   <flui-checkbox
-  label="Active"
-  formControlName="active"></flui-checkbox>
+  label="Active Profile"
+  formControlName="activeProfile"></flui-checkbox>
 
-  <flui-button [disabled]="!fakeForm.valid" (isClicked)="isBtnClicked($event)" text="Submit"></flui-button>
-  <flui-button type="success" (isClicked)="isBtnClicked($event)" text="Add"></flui-button>
-  <flui-button type="danger" (isClicked)="isBtnClicked($event)" text="Cancel"></flui-button>
+  <flui-checkbox
+  label="Remember Password"
+  labelPosition="before"
+  [disabled]="true"
+  formControlName="rememberPassword"></flui-checkbox>
 
-  <pre>value => {{ fakeForm.value | json }}</pre>
-  <pre>Valid => {{ fakeForm.valid | json }}</pre>
+  <flui-button
+    style="margin-right: .875rem"
+    [disabled]="!fakeForm.valid"
+    (isClicked)="isBtnClicked($event)"
+    text="Submit"></flui-button>
+  <flui-button
+    style="margin-right: .875rem"
+    type="success"
+    (isClicked)="isBtnClicked($event)"
+    text="Add"></flui-button>
+  <flui-button
+    style="margin-right: .875rem"
+    type="danger"
+    (isClicked)="isBtnClicked($event)"
+    text="Cancel"></flui-button>
 
+  <div fluiCard>
+    <pre>value => {{ fakeForm.value | json }}</pre>
+    <pre>Valid => {{ fakeForm.valid | json }}</pre>
+  </div>
 </form>

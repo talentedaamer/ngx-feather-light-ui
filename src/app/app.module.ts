@@ -9,7 +9,7 @@ import { FluiInputPreviewComponent } from './components/flui-input-preview/flui-
 @NgModule({
   declarations: [
     AppComponent,
-    FluiInputPreviewComponent
+    FluiInputPreviewComponent,
   ],
   imports: [
     SharedModule,

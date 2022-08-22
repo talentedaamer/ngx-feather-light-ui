@@ -1,0 +1,35 @@
+:host .flui-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+:host .flui-checkbox-wrap > input {
+  margin: 0;
+}
+
+:host .flui-checkbox-wrap > label {
+  font-size: .875rem;
+}
+
+:host .flui-checkbox-wrap.flui-label-before > label {
+  margin-right: .5rem;
+}
+
+:host .flui-checkbox-wrap.flui-label-after > label {
+  margin-left: .5rem;
+}
+
+
+:host .flui-checkbox-wrap.flui-label-before {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+:host .flui-checkbox-wrap.flui-label-after {
+  flex-direction: row;
+  justify-content: start;
+}
+
+:host .flui-checkbox-wrap.flui-disabled {
+  /*opacity: 0.6;*/
+}

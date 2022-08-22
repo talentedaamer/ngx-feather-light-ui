@@ -45,9 +45,11 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
   }
 
   checkboxSelectionChange() {
-    this.checked = !this.checked;
-    this.value = this.checked;
-    this.isCheckChanged.emit(this.checked);
+    if (this.disabled !== true) {
+      this.checked = !this.checked;
+      this.value = this.checked;
+      this.isCheckChanged.emit(this.checked);
+    }
   }
 
   override writeValue(value: any) {
@@ -57,7 +59,8 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
 
   get checkboxClasses() {
     let classes: any = {
-      'flui-checkbox-wrap': true
+      'flui-checkbox-wrap': true,
+      [`flui-label-${this.labelPosition}`]: true
     }
 
     if (this.disabled) {

@@ -16,8 +16,8 @@
   outline: none;
 }
 
-:host .flui-input-wrap > input:focus,
-:host .flui-input-wrap > input:hover {
+:host .flui-input-wrap > input:focus:enabled,
+:host .flui-input-wrap > input:hover:enabled {
   border-color: #000;
 }
 

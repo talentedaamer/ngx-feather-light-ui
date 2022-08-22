@@ -19,3 +19,9 @@ export * from './lib/flui-button/flui-button.module';
  */
 export * from './lib/flui-checkbox/flui-checkbox.component';
 export * from './lib/flui-checkbox/flui-checkbox.module';
+
+/**
+ * directives
+ */
+export * from './lib/directives/flui-directives.module';
+export * from './lib/directives/flui-card.directive'
