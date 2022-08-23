@@ -4,9 +4,9 @@
 
 <nav class="app-sidenav">
   <p class="nav-group">Components</p>
-  <ul class="nav-list">
-    <li><a href="#">Input</a></li>
-    <li><a href="#">Button</a></li>
-    <li><a href="#">Checkbox</a></li>
+  <ul class="nav-list" *ngIf="navLinks.length > 0">
+    <li *ngFor="let link of navLinks">
+      <a [routerLink]="link.link" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact:true}">{{link.title}}</a>
+    </li>
   </ul>
 </nav>

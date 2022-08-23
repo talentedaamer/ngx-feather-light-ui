@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-flui-input-preview',
-  templateUrl: './flui-input-preview.component.html',
-  styleUrls: ['./flui-input-preview.component.scss']
+  selector: 'app-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss']
 })
-export class FluiInputPreviewComponent {
+export class InputComponent {
 
   public errorMessages: any = {
     required: 'This Field is Required',
@@ -26,7 +26,6 @@ export class FluiInputPreviewComponent {
   ) {}
 
   isBtnClicked($event: any) {
-    console.log('>> isBtnClicked', $event);
     console.log('>> fakeform value', this.fakeForm.value);
   }
 }

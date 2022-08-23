@@ -7,6 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  navLinks = [
+    {
+      link: 'button',
+      title: 'Button'
+    },
+    {
+      link: 'input',
+      title: 'Input'
+    },
+    {
+      link: 'textarea',
+      title: 'Textarea'
+    },
+    {
+      link: 'checkbox',
+      title: 'Checkbox'
+    },
+    {
+      link: 'radio',
+      title: 'Radio'
+    },
+    {
+      link: 'selectbox',
+      title: 'Selectbox'
+    },
+    {
+      link: 'alert',
+      title: 'Alert'
+    },
+  ]
   constructor() { }
 
   ngOnInit(): void {
