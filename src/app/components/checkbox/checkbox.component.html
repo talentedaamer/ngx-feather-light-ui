@@ -1,1 +1,23 @@
-<p>checkbox works!</p>
+<div fluiCard [formGroup]="fakeForm">
+  <h3 fluiCardHeader>Checkbox Control</h3>
+  <flui-checkbox
+    label="Active Profile"
+    formControlName="activeProfile"></flui-checkbox>
+
+  <flui-checkbox
+    label="Remember Password"
+    labelPosition="before"
+    formControlName="rememberPassword"
+    [disabled]="true"></flui-checkbox>
+
+  <flui-button
+    variant="primary"
+    [disabled]="!fakeForm.valid"
+    (isClicked)="isBtnClicked($event)"
+    text="Register"></flui-button>
+</div>
+
+<div fluiCard>
+  <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+</div>

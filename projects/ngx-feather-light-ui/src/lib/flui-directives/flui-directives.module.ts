@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FluiCardDirective } from "./flui-card.directive";
-import { FluiMessageDirective } from './flui-message.directive';
+import {FluiCardDirective, FluiCardHeaderDirective} from "./flui-card.directive";
 
 
 @NgModule({
   declarations: [
     FluiCardDirective,
-    FluiMessageDirective,
+    FluiCardHeaderDirective,
   ],
   imports: [
     CommonModule
   ],
   exports: [
     FluiCardDirective,
-    FluiMessageDirective,
+    FluiCardHeaderDirective,
   ]
 })
 export class FluiDirectivesModule { }

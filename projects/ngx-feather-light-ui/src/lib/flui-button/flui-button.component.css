@@ -1,35 +1,220 @@
 :host .flui-button {
-  padding: .5rem .625rem;
-  border-radius: .25rem;
-  border: 1px solid #b9b8b8;
-  margin-bottom: 1rem;
+  border-radius: .375rem;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding: .5rem 1rem;
+  text-align: center;
+  white-space: nowrap;
 }
-
-:host .flui-button:focus,
 :host .flui-button:hover {
-  border-color: #000;
+  border-color: #b5b5b5;
+  color: #363636;
+}
+:host .flui-button:focus {
+  border-color: #485fc7;
+  color: #363636;
+}
+:host .flui-button:active {
+  border-color: #4a4a4a;
+  color: #363636;
+}
+:host .flui-button[disabled] {
+  background-color: white;
+  border-color: #dbdbdb;
+  box-shadow: none;
 }
 
-:host .flui-button.flui-button-variant-base {}
-:host .flui-button.flui-button-variant-outline {}
-:host .flui-button.flui-button-variant-link {}
 
-:host .flui-button.flui-button-type-primary {
-  background: #4198FF;
-  border-color: #4198FF;
-  color: #ffffff;
+.button:focus:not(:active), .button.is-focused:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
 }
-:host .flui-button.flui-button-type-success {
-  background: #157347;
-  border-color: #146c43;
-  color: #ffffff;
+
+.button:active, .button.is-active {
+  border-color: #4a4a4a;
+  color: #363636;
 }
-:host .flui-button.flui-button-type-danger {
-  background: #dc3545;
-  border-color: #dc3545;
-  color: #ffffff;
+
+
+
+/* button primary */
+:host .flui-button.flui-button-variant-primary {
+  background-color: #485fc7;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-primary:hover {
+  background-color: #3e56c4;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-primary:focus {
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-primary:focus:not(:active)  {
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+
+:host .flui-button.flui-button-variant-primary:active {
+  background-color: #3a51bb;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-primary[disabled] {
+  background-color: #485fc7;
+  border-color: #485fc7;
+  box-shadow: none;
+}
+
+/* button light */
+:host .flui-button.flui-button-variant-light {
+  background-color: whitesmoke;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+:host .flui-button.flui-button-variant-light:hover {
+  background-color: #eeeeee;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+:host .flui-button.flui-button-variant-light:focus {
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+:host .flui-button.flui-button-variant-light:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
+}
+:host .flui-button.flui-button-variant-light:active  {
+  background-color: #e8e8e8;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+:host .flui-button.flui-button-variant-light[disabled] {
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  box-shadow: none;
+}
+
+/* button dark */
+:host .flui-button.flui-button-variant-dark {
+  background-color: #363636;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-dark:hover {
+  background-color: #2f2f2f;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-dark:focus {
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-dark:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
+}
+:host .flui-button.flui-button-variant-dark:active {
+  background-color: #292929;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-dark[disabled] {
+  background-color: #363636;
+  border-color: #363636;
+  box-shadow: none;
+}
+
+/* button success */
+:host .flui-button.flui-button-variant-success {
+  background-color: #48c78e;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-success:hover {
+  background-color: #3ec487;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-success:focus {
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-success:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(72, 199, 142, 0.25);
+}
+:host .flui-button.flui-button-variant-success:active {
+  background-color: #3abb81;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-success[disabled] {
+  background-color: #48c78e;
+  border-color: #48c78e;
+  box-shadow: none;
+}
+
+/* button danger */
+:host .flui-button.flui-button-variant-danger {
+  background-color: #f14668;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-danger:hover {
+  background-color: #f03a5f;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-danger:focus {
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-danger:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
+}
+:host .flui-button.flui-button-variant-danger:active {
+  background-color: #ef2e55;
+  border-color: transparent;
+  color: #fff;
+}
+:host .flui-button.flui-button-variant-danger[disabled] {
+  background-color: #f14668;
+  border-color: #f14668;
+  box-shadow: none;
+}
+
+/* button variant link */
+:host .flui-button.flui-button-variant-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+:host .flui-button.flui-button-variant-link:hover,
+:host .flui-button.flui-button-variant-link:focus {
+  background-color: whitesmoke;
+  color: #363636;
+}
+
+:host .flui-button.flui-button-variant-link:active {
+  background-color: #e8e8e8;
+  color: #363636;
+}
+
+:host .flui-button.flui-button-variant-link[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+:host .flui-button.flui-rounded {
+  border-radius: 999px;
 }
 
 :host .flui-button.flui-disabled {
-  opacity: 0.6;
+  opacity: 0.5;
+  cursor: not-allowed;
 }

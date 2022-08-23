@@ -3,8 +3,13 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

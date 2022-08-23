@@ -10,15 +10,15 @@ export class InputComponent {
 
   public errorMessages: any = {
     required: 'This Field is Required',
-    minLength: 'Min Lengh of 30 Character is Required'
+    minLength: 'Min Lengh of 30 Character is Required',
+    email: 'Please enter a valid email.'
   };
 
   fakeForm = this._formBuilder.group({
     firstName: ['Muhammad', Validators.required ],
     lastName: ['Ibrahim'],
+    email: ['', [Validators.email, Validators.required]],
     password: ['password'],
-    activeProfile: [false, Validators.requiredTrue],
-    rememberPassword: [true],
   })
 
   constructor(

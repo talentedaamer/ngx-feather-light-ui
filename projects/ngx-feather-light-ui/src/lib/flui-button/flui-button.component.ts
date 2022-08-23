@@ -8,10 +8,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class FluiButtonComponent {
 
   @Input()
-  variant: 'base' | 'outline' | 'link' = 'base';
+  variant: 'primary' | 'light' | 'dark' | 'success' | 'danger' | 'link' | '' = '';
 
   @Input()
-  type: 'primary' | 'success' | 'danger' = 'primary';
+  rounded: boolean = false;
 
   @Input()
   get text(): string | undefined {
@@ -35,12 +35,18 @@ export class FluiButtonComponent {
   get fluiButtonClasses(): any {
     let buttonClasses: any = {
       'flui-button': true,
-      [`flui-button-variant-${this.variant}`]: true,
-      [`flui-button-type-${this.type}`]: true,
     };
+
+    if (this.variant !== '') {
+      buttonClasses[`flui-button-variant-${this.variant}`] = true
+    }
 
     if (this.disabled) {
       buttonClasses['flui-disabled'] = true;
+    }
+
+    if (this.rounded) {
+      buttonClasses['flui-rounded'] = true;
     }
 
     return buttonClasses;

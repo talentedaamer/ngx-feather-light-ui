@@ -38,6 +38,10 @@
   -webkit-overflow-scrolling: touch;
   will-change: transform;
 
+
+  box-shadow: .5rem 0 1em -0.125em rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
   &.sidebar-open {
     width: 240px;
     transform: translateX(0) translateY(0) translateZ(0);

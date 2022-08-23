@@ -2,27 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-/**
- * using modules from ngx-feather-light-ui npm package
- */
-// import {
-//   FluiButtonModule,
-//   FluiCheckboxModule,
-//   FluiInputModule
-// } from "ngx-feather-light-ui";
-
 import { FluiInputModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-input/flui-input.module";
 import { FluiButtonModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-button/flui-button.module";
 import { FluiCheckboxModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-checkbox/flui-checkbox.module";
-import { FluiCardDirective } from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-card.directive";
+import { FluiTextareaModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-textarea/flui-textarea.module";
+import { FluiSelectboxModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-selectbox/flui-selectbox.module";
+import { FluiRadioModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-radio/flui-radio.module";
+
 import {
-  FluiMessageDirective
-} from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-message.directive";
+  FluiCardDirective,
+  FluiCardHeaderDirective
+} from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-card.directive";
 
 @NgModule({
   declarations: [
     FluiCardDirective,
-    FluiMessageDirective,
+    FluiCardHeaderDirective,
   ],
   imports: [
     CommonModule,
@@ -31,6 +26,9 @@ import {
     FluiInputModule,
     FluiButtonModule,
     FluiCheckboxModule,
+    FluiTextareaModule,
+    FluiSelectboxModule,
+    FluiRadioModule,
   ],
   exports: [
     CommonModule,
@@ -39,8 +37,11 @@ import {
     FluiInputModule,
     FluiButtonModule,
     FluiCheckboxModule,
+    FluiTextareaModule,
+    FluiSelectboxModule,
+    FluiRadioModule,
     FluiCardDirective,
-    FluiMessageDirective,
+    FluiCardHeaderDirective
   ]
 })
 export class SharedModule { }

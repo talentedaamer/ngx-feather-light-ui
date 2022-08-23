@@ -21,8 +21,26 @@ export * from './lib/flui-checkbox/flui-checkbox.component';
 export * from './lib/flui-checkbox/flui-checkbox.module';
 
 /**
+ * textarea
+ */
+export * from './lib/flui-textarea/flui-textarea.component';
+export * from './lib/flui-textarea/flui-textarea.module';
+
+/**
+ * selectbox
+ */
+export * from './lib/flui-selectbox/flui-selectbox.component';
+export * from './lib/flui-selectbox/flui-selectbox.module';
+
+/**
+ * radio
+ */
+export * from './lib/flui-radio/flui-radio.component';
+export * from './lib/flui-radio/flui-radio.module';
+
+/**
  * directives
  */
-// export * from './lib/directives/flui-directives.module';
-export * from './lib/flui-directives/flui-card.directive'
-export * from './lib/flui-directives/flui-message.directive';
+export * from './lib/flui-directives/flui-directives.module';
+// export * from './lib/flui-directives/flui-card.directive'
+// export * from './lib/flui-directives/flui-message.directive';

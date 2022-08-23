@@ -8,12 +8,31 @@ export class FluiCardDirective {
   constructor(
     private elementRef: ElementRef
   ) {
-    const cardElementStyle = this.elementRef.nativeElement.style;
-    cardElementStyle.backgroundColor = '#ffffff';
-    cardElementStyle.borderRadius = '.25rem'
-    cardElementStyle.marginBottom = '1rem';
-    cardElementStyle.padding = '1rem';
-    cardElementStyle.boxShadow = '0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02)';
+    let css = `
+    background: #ffffff;
+    border-radius: .375rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 1em -0.125em rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1)`;
+    this.elementRef.nativeElement.setAttribute("style", css);
+  }
+
+}
+
+
+@Directive({
+  selector: '[fluiCardHeader]'
+})
+export class FluiCardHeaderDirective {
+
+  constructor(
+    private elementRef: ElementRef
+  ) {
+    let css = `
+    color: #363636;
+    margin: 0 0 1.5rem;`;
+    this.elementRef.nativeElement.setAttribute("style", css);
   }
 
 }

@@ -1,5 +1,6 @@
 <form [formGroup]="fakeForm">
   <div fluiCard>
+    <h3 fluiCardHeader>Input Component</h3>
     <flui-input
       name="fname"
       id="fname"
@@ -16,37 +17,30 @@
       formControlName="lastName"></flui-input>
 
     <flui-input
+      label="Email"
+      placeholder="Enter Email Address..."
+      [errorMessages]="errorMessages"
+      formControlName="email"></flui-input>
+
+    <flui-input
       type="password"
       label="Password"
       placeholder="Enter Password..."
       [disabled]="true"
       formControlName="password"></flui-input>
+
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+
+    {{ fakeForm.controls.email.errors | json }}
   </div>
 
   <div fluiCard>
-    <flui-checkbox
-      label="Active Profile"
-      formControlName="activeProfile"></flui-checkbox>
-
-    <flui-checkbox
-      label="Remember Password"
-      labelPosition="before"
-      [disabled]="true"
-      formControlName="rememberPassword"></flui-checkbox>
+    <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+    <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
   </div>
 
-  <flui-button
-    style="margin-right: .875rem"
-    [disabled]="!fakeForm.valid"
-    (isClicked)="isBtnClicked($event)"
-    text="Submit"></flui-button>
-
-  <div fluiCard>
-    <pre>value => {{ fakeForm.value | json }}</pre>
-    <pre>Valid => {{ fakeForm.valid | json }}</pre>
-  </div>
-
-  <div fluiMessage>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
-  </div>
 </form>
