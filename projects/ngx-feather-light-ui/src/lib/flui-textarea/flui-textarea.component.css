@@ -1,0 +1,76 @@
+:host .flui-textarea-wrap {
+  margin-bottom: 1rem;
+}
+
+:host .flui-textarea-wrap > label {
+  font-size: .875rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+:host .flui-textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  padding: .75em;
+  resize: vertical;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-radius: .375rem;
+  color: #363636;
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  outline: none;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+:host .flui-textarea:hover {
+  border-color: #b5b5b5;
+}
+:host .flui-textarea:focus, .flui-textarea:active {
+  border-color: #485fc7;
+}
+:host .flui-textarea[disabled] {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  box-shadow: none;
+  color: #7a7a7a;
+}
+
+/* placeholder color */
+:host .flui-textarea::-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+:host .flui-textarea::-webkit-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+:host .flui-textarea:-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+:host .flui-textarea:-ms-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+:host .flui-textarea[readonly] {
+  box-shadow: none;
+}
+
+/* errors */
+:host .flui-textarea-wrap.flui-invalid .flui-textarea {
+  border-color: #f14668;
+}
+:host .flui-textarea-wrap.flui-invalid > input::placeholder,
+:host .flui-textarea-wrap .flui-errors-wrap {
+  color: #f14668;
+}
+
+:host .flui-textarea-wrap .flui-errors-wrap .flui-error-item {
+  margin-top: .25rem;
+  font-size: .75rem;
+  display: block;
+}

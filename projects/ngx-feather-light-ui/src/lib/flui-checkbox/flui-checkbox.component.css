@@ -1,0 +1,77 @@
+:host .flui-checkbox-wrap {
+  display: block;
+}
+
+:host .flui-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+:host .flui-checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+:host .flui-checkbox .flui-checkmark {
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #dbdbdb;
+  border-radius: .125rem;
+}
+:host .flui-checkbox.flui-checkbox-label-right {
+  padding-left: 1.5rem;
+}
+:host .flui-checkbox.flui-checkbox-label-left {
+  padding-right: 1.5rem;
+}
+:host .flui-checkbox.flui-checkbox-label-right .flui-checkmark {
+  left: 0;
+}
+:host .flui-checkbox.flui-checkbox-label-left .flui-checkmark {
+  right: 0;
+}
+
+:host .flui-checkbox:hover input ~ .flui-checkmark,
+:host .flui-checkbox input:focus ~ .flui-checkmark {
+  background: #dbdbdb;
+}
+:host .flui-checkbox input:checked ~ .flui-checkmark {
+  background: #485fc7;
+  border: none;
+}
+:host .flui-checkbox:hover input:not([disabled]):checked ~ .flui-checkmark,
+:host .flui-checkbox input:checked:focus ~ .flui-checkmark {
+  background: #3e56c4;
+}
+:host .flui-checkbox .flui-checkmark:after {
+  position: absolute;
+  display: none;
+  content: '';
+
+  top: .125rem;
+  left: .3125rem;
+  width: .25rem;
+  height: .5rem;
+  transform: rotate(45deg);
+  border: solid #fff;
+  border-width: 0 .125rem .125rem 0;
+}
+:host .flui-checkbox input:checked ~ .flui-checkmark:after {
+  display: block;
+}
+
+:host .flui-checkbox.flui-invalid .flui-checkmark {
+  border-color: #f14668;
+}
+
+:host .flui-checkbox input:disabled ~ .flui-checkmark {
+  pointer-events: none;
+  opacity: .6;
+  background: #e6e6e6;
+}
+:host .flui-checkbox input:disabled ~ .flui-checkmark:after {
+  border-color: #7b7b7b;
+}

@@ -1,0 +1,27 @@
+<div fluiCard [formGroup]="fakeForm">
+  <h3 fluiCardHeader>Textarea Component</h3>
+  <flui-textarea
+    label="About User"
+    placeholder="Enter User Bio..."
+    [errorMessages]="errorMessages"
+    formControlName="aboutUser"></flui-textarea>
+
+  <flui-textarea
+    label="User Bio"
+    placeholder="Enter User Bio..."
+    [errorMessages]="errorMessages"
+    [disabled]="true"
+    formControlName="userBio"></flui-textarea>
+
+  <flui-button
+    variant="primary"
+    [disabled]="!fakeForm.valid"
+    (isClicked)="isBtnClicked($event)"
+    text="Register"></flui-button>
+</div>
+
+
+<div fluiCard>
+  <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+</div>

@@ -1,0 +1,24 @@
+<div [ngClass]="textareaClasses">
+  <label
+    [for]="id"
+    class="flui-label"
+    *ngIf="label !== ''">{{label}}</label>
+
+  <textarea
+    class="flui-textarea"
+    id="{{id}}"
+    name="{{name}}"
+    placeholder="{{placeholder}}"
+    [required]="required"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    (keydown)="_onTouched()"
+    (blur)="_onTouched()"
+    spellcheck="false"></textarea>
+
+    <ng-container *ngIf="errorState">
+      <div class="flui-errors-wrap" *ngFor="let error of errors">
+        <small class="flui-error-item">{{error}}</small>
+      </div>
+    </ng-container>
+</div>

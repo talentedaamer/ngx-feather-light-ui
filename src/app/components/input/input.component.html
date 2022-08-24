@@ -1,0 +1,45 @@
+<form [formGroup]="fakeForm">
+  <div fluiCard>
+    <h3 fluiCardHeader>Input Component</h3>
+    <flui-input
+      name="fname"
+      id="fname"
+      label="First Name"
+      placeholder="Enter First Name..."
+      [errorMessages]="errorMessages"
+      formControlName="firstName"></flui-input>
+
+    <flui-input
+      label="Last Name"
+      placeholder="Enter Last Name..."
+      [required]="true"
+      [errorMessages]="errorMessages"
+      formControlName="lastName"></flui-input>
+
+    <flui-input
+      label="Email"
+      placeholder="Enter Email Address..."
+      [errorMessages]="errorMessages"
+      formControlName="email"></flui-input>
+
+    <flui-input
+      type="password"
+      label="Password"
+      placeholder="Enter Password..."
+      [disabled]="true"
+      formControlName="password"></flui-input>
+
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+
+  </div>
+
+  <div fluiCard>
+    <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+    <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+  </div>
+
+</form>

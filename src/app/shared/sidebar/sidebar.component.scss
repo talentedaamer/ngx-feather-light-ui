@@ -1,0 +1,47 @@
+:host .app-logo {
+  text-align: center;
+  padding: 1rem;
+  display: block;
+  overflow: hidden;
+
+  & > img {
+    height: 24px;
+    float: left;
+  }
+}
+
+:host .app-sidenav {
+  padding: 1rem;
+  .nav-group {
+    color: #b5b5b5;
+    font-size: .625rem;
+    text-transform: uppercase;
+  }
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      margin-bottom: .25rem;
+
+      a {
+        display: block;
+        font-size: .875rem;
+        border-radius: 0.25em;
+        color: #363636;
+        padding: 0.375em 0.75em;
+
+        &:hover {
+          background-color: #ffffff;
+          color: #485fc7;
+        }
+        &.nav-active {
+          background-color: #485fc7;
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+}
