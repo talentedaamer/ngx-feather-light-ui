@@ -42,5 +42,5 @@ export * from './lib/flui-radio/flui-radio.module';
  * directives
  */
 export * from './lib/flui-directives/flui-directives.module';
-// export * from './lib/flui-directives/flui-card.directive'
+export * from './lib/flui-directives/flui-card.directive'
 // export * from './lib/flui-directives/flui-message.directive';
