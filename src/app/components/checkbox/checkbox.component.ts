@@ -14,7 +14,7 @@ export class CheckboxComponent implements OnInit {
 
   fakeForm = this._formBuilder.group({
     activeProfile: ['', Validators.requiredTrue ],
-    rememberPassword: [''],
+    rememberPassword: [true],
   })
 
   constructor(
