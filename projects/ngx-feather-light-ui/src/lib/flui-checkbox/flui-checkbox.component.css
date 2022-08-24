@@ -1,7 +1,10 @@
+:host .flui-checkbox-wrap {
+  display: block;
+}
+
 :host .flui-checkbox {
   position: relative;
-  display: block;
-  padding-left: 1.5rem;
+  display: inline-block;
   cursor: pointer;
   margin-bottom: 1rem;
 }
@@ -12,13 +15,25 @@
 }
 :host .flui-checkbox .flui-checkmark {
   position: absolute;
-  top: .125rem;
-  left: 0;
+  top: 0;
   width: 1rem;
   height: 1rem;
   border: 2px solid #dbdbdb;
   border-radius: .125rem;
 }
+:host .flui-checkbox.flui-checkbox-label-right {
+  padding-left: 1.5rem;
+}
+:host .flui-checkbox.flui-checkbox-label-left {
+  padding-right: 1.5rem;
+}
+:host .flui-checkbox.flui-checkbox-label-right .flui-checkmark {
+  left: 0;
+}
+:host .flui-checkbox.flui-checkbox-label-left .flui-checkmark {
+  right: 0;
+}
+
 :host .flui-checkbox:hover input ~ .flui-checkmark,
 :host .flui-checkbox input:focus ~ .flui-checkmark {
   background: #dbdbdb;

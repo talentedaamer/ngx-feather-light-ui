@@ -9,18 +9,24 @@ import {NgControl} from "@angular/forms";
 })
 export class FluiCheckboxComponent extends FluiControlValueAccessor {
 
-  @Input() id?: string;
-
-  @Input() name?: string = '';
+  private uniqueIdentifier = `flui-checkbox-${new Date().getTime().toString()}`;
 
   @Input()
-  get label() {
+  id: string = this.uniqueIdentifier;
+
+  @Input()
+  name: string = this.uniqueIdentifier;
+
+  @Input()
+  get label(): string | undefined {
     return this._label;
   }
-  set label(label) {
+  set label(label: string | undefined ) {
     this._label = label;
   }
-  private _label?: string;
+  private _label?: string | undefined;
+
+  @Input() labelPosition: 'right' | 'left' = 'right';
 
   @Input() checked: boolean = false;
 
@@ -68,19 +74,22 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
   }
 
   get checkboxClasses() {
-    let classes: any = {
-      'flui-checkbox': true
+    let checkboxClasses: any = {
+      'flui-checkbox': true,
+      [`flui-checkbox-label-${this.labelPosition}`]: true
     }
 
+    // checkboxClasses[`flui-checkbox-label-${this.labelPosition}`] = true;
+
     if (this.disabled) {
-      classes['flui-disabled'] = true;
+      checkboxClasses['flui-disabled'] = true;
     }
 
     if (this.errorState) {
-      classes['flui-invalid'] = true;
+      checkboxClasses['flui-invalid'] = true;
     }
 
-    return classes;
+    return checkboxClasses;
   }
 
 }

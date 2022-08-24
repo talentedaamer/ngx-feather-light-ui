@@ -18,37 +18,45 @@ const CUI_INPUT_CONTROL_VALUE_ACCESSOR = {
 })
 export class FluiInputComponent extends FluiControlValueAccessor {
 
-  @Input() id?: string;
-
-  @Input() name?: string = '';
-
-  @Input() type: string = 'text';
+  private uniqueIdentifier = `flui-control-${new Date().getTime().toString()}`;
 
   @Input()
-  get label() {
+  id: string = this.uniqueIdentifier;
+
+  @Input()
+  name: string = this.uniqueIdentifier;
+
+  @Input()
+  type: string = 'text';
+
+  @Input()
+  get label(): string | undefined {
     return this._label;
   }
-  set label(label) {
+  set label(label: string | undefined ) {
     this._label = label;
   }
-  private _label?: string;
+  private _label?: string | undefined;
 
   @Input()
-  get placeholder() {
+  get placeholder(): string | undefined {
     return this._placeholder;
   }
-  set placeholder(placeholder) {
+  set placeholder(placeholder: string | undefined ) {
     this._placeholder = placeholder;
   }
-  private _placeholder?: string;
+  private _placeholder?: string | undefined;
 
-  @Input() errorMessages = [];
+  @Input()
+  errorMessages: string[] = [];
 
-  @Input() required: boolean = false;
+  @Input()
+  required: boolean = false;
 
-  @Input() disabled: boolean = false;
+  @Input()
+  disabled: boolean = false;
 
-  public errors = [];
+  public errors: string[] = [];
 
   constructor(
     @Optional() @Self() public ngControl: NgControl,
@@ -62,7 +70,7 @@ export class FluiInputComponent extends FluiControlValueAccessor {
 
   get errorState(): boolean {
     this.errors = [];
-    if (this.disabled !== true && this.ngControl ) {
+    if (!this.disabled && this.ngControl ) {
       const control: any = this.ngControl.control
       if (control.errors && control.touched) {
         const controlErrors = Object.keys(control.errors);
@@ -78,18 +86,12 @@ export class FluiInputComponent extends FluiControlValueAccessor {
   }
 
   get inputClasses() {
-    let classes: any = {
-      'flui-input-wrap': true
+    let inputClasses: any = {
+      'flui-input-wrap': true,
+      'flui-disabled': this.disabled,
+      'flui-invalid': this.errorState
     }
 
-    if (this.disabled) {
-      classes['flui-disabled'] = true;
-    }
-
-    if (this.errorState) {
-      classes['flui-invalid'] = true;
-    }
-
-    return classes;
+    return inputClasses;
   }
 }

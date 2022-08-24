@@ -1,12 +1,14 @@
-<div [ngClass]="checkboxClasses" (click)="checkboxSelectionChange()">
-  <label class="flui-checkbox-label" *ngIf="label !== ''">{{label}}</label>
-  <input
-    type="checkbox"
-    id="{{id}}"
-    name="{{name}}"
-    [disabled]="disabled"
-    [required]="required"
-    [ngModel]="checked">
-  <div class="flui-checkmark"></div>
+<div class="flui-checkbox-wrap">
+  <div [ngClass]="checkboxClasses" (click)="checkboxSelectionChange()">
+    <label class="flui-checkbox-label" *ngIf="label !== ''">{{label}}</label>
+    <input
+      type="checkbox"
+      id="{{id}}"
+      name="{{name}}"
+      [disabled]="disabled"
+      [required]="required"
+      [ngModel]="checked">
+    <div class="flui-checkmark"></div>
+  </div>
 </div>
 
