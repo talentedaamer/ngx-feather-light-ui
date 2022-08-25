@@ -1,1 +1,15 @@
-<flui-radio></flui-radio>
+<div fluiCard [formGroup]="fakeForm">
+  <h3 fluiCardHeader>Radio Control</h3>
+  <flui-radio></flui-radio>
+
+  <flui-button
+    variant="primary"
+    [disabled]="!fakeForm.valid"
+    (isClicked)="isBtnClicked($event)"
+    text="Register"></flui-button>
+</div>
+
+<div fluiCard>
+  <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+</div>

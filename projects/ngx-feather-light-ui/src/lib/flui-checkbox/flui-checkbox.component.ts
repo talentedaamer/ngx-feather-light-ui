@@ -76,17 +76,9 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
   get checkboxClasses() {
     let checkboxClasses: any = {
       'flui-checkbox': true,
-      [`flui-checkbox-label-${this.labelPosition}`]: true
-    }
-
-    // checkboxClasses[`flui-checkbox-label-${this.labelPosition}`] = true;
-
-    if (this.disabled) {
-      checkboxClasses['flui-disabled'] = true;
-    }
-
-    if (this.errorState) {
-      checkboxClasses['flui-invalid'] = true;
+      [`flui-checkbox-label-${this.labelPosition}`]: true,
+      'flui-disabled': this.disabled,
+      'flui-invalid': this.errorState
     }
 
     return checkboxClasses;

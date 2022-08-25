@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-radio',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RadioComponent implements OnInit {
 
-  constructor() { }
+  public errorMessages: any = {
+    required: 'This Field is Required',
+  };
+
+  fakeForm = this._formBuilder.group({
+    activeProfile: ['', Validators.requiredTrue ],
+    rememberPassword: [true],
+  })
+
+  constructor(
+    private _formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  isBtnClicked($event: any) {
+    console.log('>> fakeform value', this.fakeForm.value);
   }
 
 }
