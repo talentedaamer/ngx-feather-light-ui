@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
@@ -6,23 +6,30 @@ import {FormBuilder, Validators} from "@angular/forms";
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.scss']
 })
-export class RadioComponent implements OnInit {
+export class RadioComponent {
 
-  public errorMessages: any = {
-    required: 'This Field is Required',
-  };
+  public favFood = [
+    {
+      label: 'Pizza',
+      value: 'pizza'
+    },
+    {
+      label: 'Burger',
+      value: 'burger'
+    },
+    {
+      label: 'Fries',
+      value: 'fries'
+    },
+  ];
 
   fakeForm = this._formBuilder.group({
-    activeProfile: ['', Validators.requiredTrue ],
-    rememberPassword: [true],
+    favFood: ['burger'],
   })
 
   constructor(
     private _formBuilder: FormBuilder
   ) {}
-
-  ngOnInit(): void {
-  }
 
   isBtnClicked($event: any) {
     console.log('>> fakeform value', this.fakeForm.value);

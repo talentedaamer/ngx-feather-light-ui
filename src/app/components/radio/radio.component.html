@@ -1,6 +1,15 @@
 <div fluiCard [formGroup]="fakeForm">
   <h3 fluiCardHeader>Radio Control</h3>
-  <flui-radio></flui-radio>
+  <flui-radio
+    name="favFood"
+    label="Burger"
+    radioValue="burger"
+    formControlName="favFood"></flui-radio>
+  <flui-radio
+    name="favFood"
+    label="Pizza"
+    radioValue="pizza"
+    formControlName="favFood"></flui-radio>
 
   <flui-button
     variant="primary"

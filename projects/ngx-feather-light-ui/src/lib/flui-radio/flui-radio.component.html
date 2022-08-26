@@ -1,13 +1,16 @@
-<div>
-  <input type="radio" id="contactChoice1"
-         name="contact" value="email" checked>
-  <label for="contactChoice1">Email</label>
-
-  <input type="radio" id="contactChoice2"
-         name="contact" value="phone">
-  <label for="contactChoice2">Phone</label>
-
-  <input type="radio" id="contactChoice3"
-         name="contact" value="mail">
-  <label for="contactChoice3">Mail</label>
+<div [ngClass]="radioButtonClasses">
+    <label for="{{id}}" class="flui-radio-label" *ngIf="label !== ''">{{label}}</label>
+    <input
+      type="radio"
+      id="{{id}}"
+      name="{{name}}"
+      [value]="radioValue"
+      [disabled]="disabled"
+      [ngModel]="checked"
+      (change)="radioSelectionChange($event)">
 </div>
+<br>
+<br>
+{{ checked | json }}
+
+

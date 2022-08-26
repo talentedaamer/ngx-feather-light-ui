@@ -65,7 +65,6 @@ export class FluiInputComponent extends FluiControlValueAccessor {
     if (this.ngControl != null) {
       this.ngControl.valueAccessor = this;
     }
-    console.log(this.ngControl.control)
   }
 
   get errorState(): boolean {
