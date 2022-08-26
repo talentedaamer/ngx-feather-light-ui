@@ -6,7 +6,10 @@ import {FormBuilder, Validators} from "@angular/forms";
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })
-export class CheckboxComponent implements OnInit {
+export class CheckboxComponent  {
+
+  label = 'Active Profile';
+  labelPosition: any = 'right';
 
   public errorMessages: any = {
     required: 'This Field is Required',
@@ -20,9 +23,6 @@ export class CheckboxComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder
   ) {}
-
-  ngOnInit(): void {
-  }
 
   isBtnClicked($event: any) {
     console.log('>> fakeform value', this.fakeForm.value);

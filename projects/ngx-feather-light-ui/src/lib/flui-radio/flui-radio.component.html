@@ -1,16 +1,15 @@
 <div [ngClass]="radioButtonClasses">
-    <label for="{{id}}" class="flui-radio-label" *ngIf="label !== ''">{{label}}</label>
+  <div>
     <input
       type="radio"
       id="{{id}}"
       name="{{name}}"
       [value]="radioValue"
       [disabled]="disabled"
-      [ngModel]="checked"
-      (change)="radioSelectionChange($event)">
+      [ngModel]="value"
+      (change)="radioSelectionChange(radioValue)">
+    <label for="{{id}}" class="flui-radio-label" *ngIf="label !== ''">{{label}}</label>
+  </div>
 </div>
-<br>
-<br>
-{{ checked | json }}
 
 

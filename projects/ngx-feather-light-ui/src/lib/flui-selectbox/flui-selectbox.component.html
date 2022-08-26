@@ -1,1 +1,9 @@
-<p>flui-selectbox works!</p>
+<div [ngClass]="selectboxClasses">
+  <select [ngModel]="value">
+    <option value="">{{label}}</option>
+    <option
+      *ngFor="let option of options"
+      [value]="option.value"
+      (select)="selectboxOptionChange(option)">{{option.label}}</option>
+  </select>
+</div>

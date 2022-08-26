@@ -1,20 +1,11 @@
-import {Component, EventEmitter, forwardRef, Input, OnInit, Optional, Output, Self} from '@angular/core';
-import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
-import {NG_VALUE_ACCESSOR, NgControl} from "@angular/forms";
-
-export const RADIO_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => FluiRadioComponent),
-  multi: true,
-};
+import { Component, EventEmitter, Input, Optional, Output, Self } from '@angular/core';
+import { FluiControlValueAccessor } from "../common/flui-control-value-accessor";
+import { NgControl } from "@angular/forms";
 
 @Component({
   selector: 'flui-radio',
   templateUrl: './flui-radio.component.html',
   styleUrls: ['./flui-radio.component.css'],
-  providers: [
-    // RADIO_VALUE_ACCESSOR
-  ]
 })
 export class FluiRadioComponent extends FluiControlValueAccessor {
 
@@ -62,12 +53,13 @@ export class FluiRadioComponent extends FluiControlValueAccessor {
     if (!this.disabled) {
       this.checked = value;
       this.value = this.checked;
+      this._onChange(this.checked);
+      this._onTouched();
       this.isRadioChanged.emit(this.checked);
     }
   }
 
   override writeValue(value: any) {
-    console.log('write val')
     super.writeValue(value);
     this.checked = this.value;
   }

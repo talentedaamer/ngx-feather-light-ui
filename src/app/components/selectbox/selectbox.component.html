@@ -1,1 +1,22 @@
-<flui-selectbox></flui-selectbox>
+<form [formGroup]="fakeForm">
+  <div fluiCard>
+    <h3 fluiCardHeader>Selectbox Component</h3>
+
+    <flui-selectbox
+      formControlName="favFood"
+      [options]="options"></flui-selectbox>
+
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+
+  </div>
+
+  <div fluiCard>
+    <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+    <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+  </div>
+
+</form>

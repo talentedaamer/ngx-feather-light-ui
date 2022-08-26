@@ -24,7 +24,7 @@ export class RadioComponent {
   ];
 
   fakeForm = this._formBuilder.group({
-    favFood: ['burger'],
+    favFood: ['pizza'],
   })
 
   constructor(

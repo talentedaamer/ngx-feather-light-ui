@@ -1,7 +1,8 @@
 <div fluiCard [formGroup]="fakeForm">
   <h3 fluiCardHeader>Checkbox Control</h3>
   <flui-checkbox
-    label="Active Profile"
+    [label]="label"
+    [labelPosition]="labelPosition"
     formControlName="activeProfile"></flui-checkbox>
 
   <flui-checkbox
