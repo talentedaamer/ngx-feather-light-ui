@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Optional, Output, Self} from '@angular/core';
+import {Component, EventEmitter, Input, Optional, Output, Self} from '@angular/core';
 import { FluiControlValueAccessor } from "../common/flui-control-value-accessor";
 import { NgControl } from "@angular/forms";
 
@@ -7,7 +7,7 @@ import { NgControl } from "@angular/forms";
   templateUrl: './flui-radio.component.html',
   styleUrls: ['./flui-radio.component.css'],
 })
-export class FluiRadioComponent extends FluiControlValueAccessor implements OnInit {
+export class FluiRadioComponent extends FluiControlValueAccessor {
 
   private uniqueIdentifier = `flui-checkbox-${new Date().getTime().toString()}`;
 
@@ -63,7 +63,6 @@ export class FluiRadioComponent extends FluiControlValueAccessor implements OnIn
     super.writeValue(value);
     this.checked = this.value;
   }
-
 
   get radioButtonClasses() {
     let checkboxClasses: any = {
