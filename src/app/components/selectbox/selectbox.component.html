@@ -3,8 +3,17 @@
     <h3 fluiCardHeader>Selectbox Component</h3>
 
     <flui-selectbox
+      label="Select Food"
       formControlName="favFood"
+      [errorMessages]="errorMessages"
       [options]="options"></flui-selectbox>
+
+    <flui-selectbox
+      label="Select Gender"
+      formControlName="gender"
+      [disabled]="true"
+      [required]="true"
+      [options]="genderList"></flui-selectbox>
 
     <flui-button
       variant="primary"
@@ -17,6 +26,7 @@
   <div fluiCard>
     <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
     <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
+    <pre style="margin: 0">Touched => {{ fakeForm.touched | json }}</pre>
   </div>
 
 </form>

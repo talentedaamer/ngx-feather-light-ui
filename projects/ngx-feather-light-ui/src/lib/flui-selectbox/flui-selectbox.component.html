@@ -1,9 +1,22 @@
 <div [ngClass]="selectboxClasses">
-  <select [ngModel]="value">
+  <label for="{{id}}" class="flui-label" *ngIf="label !== ''">{{label}}</label>
+  <select
+    id="{{id}}"
+    name="{{name}}"
+    [ngModel]="value"
+    [required]="required"
+    [disabled]="disabled"
+    (blur)="_onTouched()"
+    (change)="selectboxOptionChange($event)">
     <option value="">{{label}}</option>
     <option
       *ngFor="let option of options"
-      [value]="option.value"
-      (select)="selectboxOptionChange(option)">{{option.label}}</option>
+      [value]="option.value">{{option.label}}</option>
   </select>
+
+  <ng-container *ngIf="errorState">
+    <div class="flui-errors-wrap" *ngFor="let error of errors">
+      <small class="flui-error-item">{{error}}</small>
+    </div>
+  </ng-container>
 </div>

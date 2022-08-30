@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Optional, Self} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Optional, Output, Self} from '@angular/core';
 import {NgControl} from "@angular/forms";
 import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
 
@@ -35,6 +35,8 @@ export class FluiSelectboxComponent extends FluiControlValueAccessor {
   }
   private _options: any[] = [];
 
+  @Input() selected: any = null;
+
   @Input()
   errorMessages: string[] = [];
 
@@ -43,6 +45,9 @@ export class FluiSelectboxComponent extends FluiControlValueAccessor {
 
   @Input()
   disabled: boolean = false;
+
+  @Output()
+  isSelectChanged: EventEmitter<any> = new EventEmitter<any>();
 
   public errors: string[] = [];
 
@@ -55,20 +60,19 @@ export class FluiSelectboxComponent extends FluiControlValueAccessor {
     }
   }
 
-  selectboxOptionChange(option: any) {
-    console.log('selectboxOptionChange')
-    // if (!this.disabled) {
-    //   this.checked = value;
-    //   this.value = this.checked;
-    //   this._onChange(this.checked);
-    //   this._onTouched();
-    //   this.isRadioChanged.emit(this.checked);
-    // }
+  selectboxOptionChange(event: any) {
+    if (!this.disabled) {
+      this.selected = event.target.value;
+      this.value = this.selected;
+      this._onChange(this.selected);
+      this._onTouched();
+      this.isSelectChanged.emit(this.selected);
+    }
   }
 
   override writeValue(value: any) {
-    console.log('writeValue')
     super.writeValue(value);
+    this.selected = this.value;
   }
 
   get errorState(): boolean {
