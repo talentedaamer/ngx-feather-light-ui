@@ -24,12 +24,15 @@ export class RadioComponent {
   ];
 
   fakeForm = this._formBuilder.group({
-    favFood: ['pizza'],
+    favFood: ['', Validators.required],
+    disabled: [''],
   })
 
   constructor(
     private _formBuilder: FormBuilder
-  ) {}
+  ) {
+    this.fakeForm.get('disabled')?.disable();
+  }
 
   isBtnClicked($event: any) {
     console.log('>> fakeform value', this.fakeForm.value);

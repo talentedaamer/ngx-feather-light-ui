@@ -9,13 +9,13 @@ import { NgControl } from "@angular/forms";
 })
 export class FluiRadioComponent extends FluiControlValueAccessor {
 
-  private uniqueIdentifier = `flui-checkbox-${new Date().getTime().toString()}`;
+  private uniqueIdentifier = `flui-radio-${Math.random().toString().substring(2, 6)}`;
 
   @Input()
   id: string = this.uniqueIdentifier;
 
   @Input()
-  name: string = this.uniqueIdentifier;
+  name: string | undefined;
 
   @Input()
   get label(): string | undefined {
@@ -65,12 +65,12 @@ export class FluiRadioComponent extends FluiControlValueAccessor {
   }
 
   get radioButtonClasses() {
-    let checkboxClasses: any = {
-      'flui-radio-button': true,
-      [`flui-radio-button-${this.labelPosition}`]: true,
+    let radioClasses: any = {
+      'flui-radio': true,
+      [`flui-radio-label-${this.labelPosition}`]: true,
       'flui-disabled': this.disabled
     }
 
-    return checkboxClasses;
+    return radioClasses;
   }
 }

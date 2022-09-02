@@ -1,5 +1,6 @@
-<div [ngClass]="radioButtonClasses">
-  <div>
+<div class="flui-radio-wrap">
+  <div [ngClass]="radioButtonClasses">
+    <label for="{{id}}" class="flui-radio-label" *ngIf="label !== ''">{{label}}</label>
     <input
       type="radio"
       id="{{id}}"
@@ -8,7 +9,7 @@
       [disabled]="disabled"
       [ngModel]="value"
       (change)="radioSelectionChange(radioValue)">
-    <label for="{{id}}" class="flui-radio-label" *ngIf="label !== ''">{{label}}</label>
+    <div class="flui-checkmark"></div>
   </div>
 </div>
 
