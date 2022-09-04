@@ -9,11 +9,6 @@ Library contains following components that can be used stand alone or with templ
 `<flui-button></flui-button>`
 ### Input Component
 `<flui-input></flui-input>`
-| Component Property                     | Default Value | Description                                                                                |
-|----------------------------------------|---------------|--------------------------------------------------------------------------------------------|
-| @Input() variant : FluiButtonVariants  |               | Button variant e.g "primary" \| "light" \| "dark" \| "success" \| "danger" \| "link" \| "" |
-|                                        |               |                                                                                            |
-
 ### Textarea Component
 `<flui-textarea></flui-textarea>`
 ### Checkbox Component
@@ -26,4 +21,3 @@ Library contains following components that can be used stand alone or with templ
 `<flui-alert></flui-alert>`
 ### Card Component
 `<flui-card></flui-card>`
-
