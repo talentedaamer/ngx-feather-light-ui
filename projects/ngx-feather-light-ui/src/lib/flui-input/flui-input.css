@@ -63,12 +63,10 @@
 :host .flui-input-wrap.flui-invalid > input {
   border-color: #f14668;
 }
-:host .flui-input-wrap.flui-invalid > input::placeholder,
 :host .flui-input-wrap.flui-invalid .flui-errors-wrap {
   color: #f14668;
 }
 :host .flui-input-wrap .flui-errors-wrap .flui-error-item {
   margin-top: .25rem;
-  font-size: .75rem;
   display: block;
 }

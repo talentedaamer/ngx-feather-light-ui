@@ -36,6 +36,10 @@ export class SidebarComponent implements OnInit {
       link: 'alert',
       title: 'Alert'
     },
+    {
+      link: 'card',
+      title: 'Card'
+    }
   ]
   constructor() { }
 

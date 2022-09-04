@@ -1,6 +1,8 @@
-<form [formGroup]="fakeForm">
-  <div fluiCard>
-    <h3 fluiCardHeader>Selectbox Component</h3>
+<flui-card [formGroup]="fakeForm">
+  <flui-card-header>
+    <flui-card-title>Selectbox Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
 
     <flui-selectbox
       label="Select Food"
@@ -15,18 +17,22 @@
       [required]="true"
       [options]="genderList"></flui-selectbox>
 
+  </flui-card-content>
+
+  <flui-card-actions>
     <flui-button
       variant="primary"
       [disabled]="!fakeForm.valid"
       (isClicked)="isBtnClicked($event)"
       text="Register"></flui-button>
 
-  </div>
+  </flui-card-actions>
+</flui-card>
 
-  <div fluiCard>
-    <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
-    <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
-    <pre style="margin: 0">Touched => {{ fakeForm.touched | json }}</pre>
-  </div>
+<flui-alert>
+  <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+</flui-alert>
 
-</form>
+<flui-alert [variant]="formTouched">Touched => {{ fakeForm.touched | json }}</flui-alert>
+
+<flui-alert [variant]="formValidity">Form Valid => {{ fakeForm.valid | json }}</flui-alert>

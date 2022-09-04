@@ -1,32 +1,24 @@
-import {Component, EventEmitter, Input, OnInit, Optional, Output, Self} from '@angular/core';
-import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
-import {NgControl} from "@angular/forms";
+import { Component, EventEmitter, Input, Optional, Output, Self } from '@angular/core';
+import { FluiControlValueAccessor } from "../common/flui-control-value-accessor";
+import { NgControl } from "@angular/forms";
+import {FluiLabelPosition} from "../common/flui-types";
 
 @Component({
   selector: 'flui-checkbox',
-  templateUrl: './flui-checkbox.component.html',
-  styleUrls: ['./flui-checkbox.component.css']
+  templateUrl: './flui-checkbox.html',
+  styleUrls: ['./flui-checkbox.css']
 })
-export class FluiCheckboxComponent extends FluiControlValueAccessor {
+export class FluiCheckbox extends FluiControlValueAccessor {
 
-  private uniqueIdentifier = `flui-checkbox-${new Date().getTime().toString()}`;
+  private uniqueIdentifier = `flui-checkbox-${Math.random().toString().substring(2, 6)}`;
 
-  @Input()
-  id: string = this.uniqueIdentifier;
+  @Input() id: string = this.uniqueIdentifier;
 
-  @Input()
-  name: string = this.uniqueIdentifier;
+  @Input() name: string = this.uniqueIdentifier;
 
-  @Input()
-  get label(): string | undefined {
-    return this._label;
-  }
-  set label(label: string | undefined ) {
-    this._label = label;
-  }
-  private _label?: string | undefined;
+  @Input() label?: string;
 
-  @Input() labelPosition: 'right' | 'left' = 'right';
+  @Input() labelPosition: FluiLabelPosition = 'right';
 
   @Input() checked: boolean = false;
 
@@ -34,10 +26,7 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
 
   @Input() disabled: boolean = false;
 
-  @Output()
-  isCheckChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  private touched: boolean = false;
+  @Output() isCheckChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(
     @Optional() @Self() public ngControl: NgControl,
@@ -50,9 +39,10 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
 
   checkboxSelectionChange() {
     if (!this.disabled) {
-      this.touched = true;
       this.checked = !this.checked;
       this.value = this.checked;
+      this._onChange(this.checked);
+      this._onTouched();
       this.isCheckChanged.emit(this.checked);
     }
   }
@@ -65,7 +55,7 @@ export class FluiCheckboxComponent extends FluiControlValueAccessor {
   get errorState(): boolean {
     if (!this.disabled && this.ngControl ) {
       const control: any = this.ngControl.control
-      if (control.errors && this.touched) {
+      if (control.errors && control.touched) {
         return true;
       }
     }

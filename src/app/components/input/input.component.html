@@ -1,45 +1,51 @@
-<form [formGroup]="fakeForm">
-  <div fluiCard>
-    <h3 fluiCardHeader>Input Component</h3>
-    <flui-input
-      name="fname"
-      id="fname"
-      label="First Name"
-      placeholder="Enter First Name..."
-      [errorMessages]="errorMessages"
-      formControlName="firstName"></flui-input>
+<flui-card [formGroup]="fakeForm">
+  <flui-card-header>
+    <flui-card-title>Input Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
+    <div>
+      <flui-input
+        name="fname"
+        id="fname"
+        label="First Name"
+        placeholder="Enter First Name..."
+        [errorMessages]="errorMessages"
+        formControlName="firstName"></flui-input>
 
-    <flui-input
-      label="Last Name"
-      placeholder="Enter Last Name..."
-      [required]="true"
-      [errorMessages]="errorMessages"
-      formControlName="lastName"></flui-input>
+      <flui-input
+        label="Last Name"
+        placeholder="Enter Last Name..."
+        [required]="true"
+        [errorMessages]="errorMessages"
+        formControlName="lastName"></flui-input>
 
-    <flui-input
-      label="Email"
-      placeholder="Enter Email Address..."
-      [errorMessages]="errorMessages"
-      formControlName="email"></flui-input>
+      <flui-input
+        label="Email"
+        placeholder="Enter Email Address..."
+        [errorMessages]="errorMessages"
+        formControlName="email"></flui-input>
 
-    <flui-input
-      type="password"
-      label="Password"
-      placeholder="Enter Password..."
-      [disabled]="true"
-      formControlName="password"></flui-input>
+      <flui-input
+        type="password"
+        label="Password"
+        placeholder="Enter Password..."
+        [disabled]="true"
+        formControlName="password"></flui-input>
 
+    </div>
+  </flui-card-content>
+
+  <flui-card-actions>
     <flui-button
       variant="primary"
       [disabled]="!fakeForm.valid"
       (isClicked)="isBtnClicked($event)"
       text="Register"></flui-button>
+  </flui-card-actions>
+</flui-card>
 
-  </div>
+<flui-alert>
+  <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
+</flui-alert>
 
-  <div fluiCard>
-    <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
-    <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
-  </div>
-
-</form>
+<flui-alert [variant]="formValidity">Form Valid => {{ fakeForm.valid | json }}</flui-alert>

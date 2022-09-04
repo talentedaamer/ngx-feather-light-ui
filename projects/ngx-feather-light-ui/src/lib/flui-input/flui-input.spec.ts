@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FluiInput } from './flui-input';
 
-import { FluiRadioComponent } from './flui-radio.component';
-
-describe('FluiRadioComponent', () => {
-  let component: FluiRadioComponent;
-  let fixture: ComponentFixture<FluiRadioComponent>;
+describe('FluiInput', () => {
+  let component: FluiInput;
+  let fixture: ComponentFixture<FluiInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FluiRadioComponent ]
+      declarations: [ FluiInput ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FluiRadioComponent);
+    fixture = TestBed.createComponent(FluiInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

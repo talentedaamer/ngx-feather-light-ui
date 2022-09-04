@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FluiSelectbox } from './flui-selectbox';
 
-import { FluiCheckboxComponent } from './flui-checkbox.component';
-
-describe('FluiCheckboxComponent', () => {
-  let component: FluiCheckboxComponent;
-  let fixture: ComponentFixture<FluiCheckboxComponent>;
+describe('FluiSelectbox', () => {
+  let component: FluiSelectbox;
+  let fixture: ComponentFixture<FluiSelectbox>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FluiCheckboxComponent ]
+      declarations: [ FluiSelectbox ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FluiCheckboxComponent);
+    fixture = TestBed.createComponent(FluiSelectbox);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

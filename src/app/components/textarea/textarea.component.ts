@@ -28,4 +28,12 @@ export class TextareaComponent implements OnInit {
   isBtnClicked($event: any) {
     console.log('>> fakeform value', this.fakeForm.value);
   }
+
+  isClearFormClicked() {
+    this.fakeForm.get('aboutUser')?.setValue('');
+  }
+
+  get formValidity(): any {
+    return this.fakeForm.valid ? 'success' : 'danger';
+  }
 }

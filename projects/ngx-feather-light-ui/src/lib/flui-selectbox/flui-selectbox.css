@@ -50,6 +50,5 @@
 }
 :host .flui-selectbox-wrap .flui-errors-wrap .flui-error-item {
   margin-top: .25rem;
-  font-size: .75rem;
   display: block;
 }

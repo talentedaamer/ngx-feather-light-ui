@@ -9,9 +9,9 @@ import { CheckboxComponent } from '../components/checkbox/checkbox.component';
 import { ButtonComponent } from '../components/button/button.component';
 import { TextareaComponent } from '../components/textarea/textarea.component';
 import { SelectboxComponent } from '../components/selectbox/selectbox.component';
-import { AlertComponent } from '../components/alert/alert.component';
 import { RadioComponent } from '../components/radio/radio.component';
-
+import { AlertComponent } from '../components/alert/alert.component';
+import { CardComponent } from "../components/card/card.component";
 
 @NgModule({
   declarations: [
@@ -21,8 +21,9 @@ import { RadioComponent } from '../components/radio/radio.component';
     ButtonComponent,
     TextareaComponent,
     SelectboxComponent,
+    RadioComponent,
     AlertComponent,
-    RadioComponent
+    CardComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,24 @@
+.flui-alert {
+  display: block;
+  background-color: #f5f5f5;
+  border-radius: .375rem;
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.flui-alert-primary {
+  background-color: #485fc7;
+  color: #fff;
+}
+.flui-alert-success {
+  background-color: #48c78e;
+  color: #fff;
+}
+.flui-alert-warning {
+  background-color: #ffe08a;
+  color: rgba(0,0,0,.7);
+}
+.flui-alert-danger {
+  background-color: #f14668;
+  color: #fff;
+}

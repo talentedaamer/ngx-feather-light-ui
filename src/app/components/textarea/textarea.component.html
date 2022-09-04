@@ -1,27 +1,42 @@
-<div fluiCard [formGroup]="fakeForm">
-  <h3 fluiCardHeader>Textarea Component</h3>
-  <flui-textarea
-    label="About User"
-    placeholder="Enter User Bio..."
-    [errorMessages]="errorMessages"
-    formControlName="aboutUser"></flui-textarea>
+<flui-card [formGroup]="fakeForm">
+  <flui-card-header>
+    <flui-card-title>Textarea Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
 
-  <flui-textarea
-    label="User Bio"
-    placeholder="Enter User Bio..."
-    [errorMessages]="errorMessages"
-    [disabled]="true"
-    formControlName="userBio"></flui-textarea>
+    <flui-textarea
+      label="About User"
+      placeholder="Enter User Bio..."
+      [errorMessages]="errorMessages"
+      formControlName="aboutUser"></flui-textarea>
 
-  <flui-button
-    variant="primary"
-    [disabled]="!fakeForm.valid"
-    (isClicked)="isBtnClicked($event)"
-    text="Register"></flui-button>
-</div>
+    <flui-textarea
+      label="User Bio"
+      placeholder="Enter User Bio..."
+      [errorMessages]="errorMessages"
+      [disabled]="true"
+      formControlName="userBio"></flui-textarea>
 
+  </flui-card-content>
 
-<div fluiCard>
+  <flui-card-actions>
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+
+    <flui-button
+      variant="danger"
+      [disabled]="fakeForm.get('aboutUser')?.value === ''"
+      (isClicked)="isClearFormClicked()"
+      text="Clear"></flui-button>
+
+  </flui-card-actions>
+</flui-card>
+
+<flui-alert>
   <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
-  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
-</div>
+</flui-alert>
+
+<flui-alert [variant]="formValidity">Form Valid => {{ fakeForm.valid | json }}</flui-alert>

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FluiButton } from './flui-button';
+import { FluiAlert } from './flui-alert';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   exports: [
-    FluiButton
+    FluiAlert
   ],
   declarations: [
-    FluiButton
+    FluiAlert
   ],
 })
-export class FluiButtonModule { }
+export class FluiAlertModule { }

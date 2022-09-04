@@ -1,4 +1,4 @@
-:host .flui-button {
+.flui-button button {
   border-radius: .375rem;
   background-color: white;
   border: 1px solid #dbdbdb;
@@ -9,212 +9,208 @@
   text-align: center;
   white-space: nowrap;
 }
-:host .flui-button:hover {
+.flui-button button:hover {
   border-color: #b5b5b5;
   color: #363636;
 }
-:host .flui-button:focus {
+.flui-button button:focus {
   border-color: #485fc7;
   color: #363636;
 }
-:host .flui-button:active {
+.flui-button button:active {
   border-color: #4a4a4a;
   color: #363636;
 }
-:host .flui-button[disabled] {
+.flui-button button[disabled] {
   background-color: white;
   border-color: #dbdbdb;
   box-shadow: none;
 }
 
-
-.button:focus:not(:active), .button.is-focused:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
-}
-
-.button:active, .button.is-active {
-  border-color: #4a4a4a;
-  color: #363636;
-}
-
-
+/*.flui-button button:focus:not(:active) {*/
+/*  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);*/
+/*}*/
+/*.flui-button button:active {*/
+/*  border-color: #4a4a4a;*/
+/*  color: #363636;*/
+/*}*/
 
 /* button primary */
-:host .flui-button.flui-button-variant-primary {
+.flui-button.flui-button-primary button {
   background-color: #485fc7;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-primary:hover {
+.flui-button.flui-button-primary button:hover {
   background-color: #3e56c4;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-primary:focus {
+.flui-button.flui-button-primary button:focus {
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-primary:focus:not(:active)  {
+.flui-button.flui-button-primary button:focus:not(:active)  {
   box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
 }
 
-:host .flui-button.flui-button-variant-primary:active {
+.flui-button.flui-button-primary button:active {
   background-color: #3a51bb;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-primary[disabled] {
+.flui-button.flui-button-primary button[disabled] {
   background-color: #485fc7;
   border-color: #485fc7;
   box-shadow: none;
 }
 
 /* button light */
-:host .flui-button.flui-button-variant-light {
+.flui-button.flui-button-light button {
   background-color: whitesmoke;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
-:host .flui-button.flui-button-variant-light:hover {
+.flui-button.flui-button-light button:hover {
   background-color: #eeeeee;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
-:host .flui-button.flui-button-variant-light:focus {
+.flui-button.flui-button-light button:focus {
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
-:host .flui-button.flui-button-variant-light:focus:not(:active) {
+.flui-button.flui-button-light button:focus:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
 }
-:host .flui-button.flui-button-variant-light:active  {
+.flui-button.flui-button-light button:active  {
   background-color: #e8e8e8;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
-:host .flui-button.flui-button-variant-light[disabled] {
+.flui-button.flui-button-light button[disabled] {
   background-color: whitesmoke;
   border-color: whitesmoke;
   box-shadow: none;
 }
 
 /* button dark */
-:host .flui-button.flui-button-variant-dark {
+.flui-button.flui-button-dark button {
   background-color: #363636;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-dark:hover {
+.flui-button.flui-button-dark button:hover {
   background-color: #2f2f2f;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-dark:focus {
+.flui-button.flui-button-dark button:focus {
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-dark:focus:not(:active) {
+.flui-button.flui-button-dark button:focus:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
 }
-:host .flui-button.flui-button-variant-dark:active {
+.flui-button.flui-button-dark button:active {
   background-color: #292929;
   border-color: transparent;
   color: #fff;
 }
-.button.is-dark[disabled] {
+.flui-button.flui-button-dark button[disabled] {
   background-color: #363636;
   border-color: #363636;
   box-shadow: none;
 }
 
 /* button success */
-:host .flui-button.flui-button-variant-success {
+.flui-button.flui-button-success button {
   background-color: #48c78e;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-success:hover {
+.flui-button.flui-button-success button:hover {
   background-color: #3ec487;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-success:focus {
+.flui-button.flui-button-success button:focus {
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-success:focus:not(:active) {
+.flui-button.flui-button-success button:focus:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(72, 199, 142, 0.25);
 }
-:host .flui-button.flui-button-variant-success:active {
+.flui-button.flui-button-success button:active {
   background-color: #3abb81;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-success[disabled] {
+.flui-button.flui-button-success button[disabled] {
   background-color: #48c78e;
   border-color: #48c78e;
   box-shadow: none;
 }
 
 /* button danger */
-:host .flui-button.flui-button-variant-danger {
+.flui-button.flui-button-danger button {
   background-color: #f14668;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-danger:hover {
+.flui-button.flui-button-danger button:hover {
   background-color: #f03a5f;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-danger:focus {
+.flui-button.flui-button-danger button:focus {
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-danger:focus:not(:active) {
+.flui-button.flui-button-danger button:focus:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
 }
-:host .flui-button.flui-button-variant-danger:active {
+.flui-button.flui-button-danger button:active {
   background-color: #ef2e55;
   border-color: transparent;
   color: #fff;
 }
-:host .flui-button.flui-button-variant-danger[disabled] {
+.flui-button.flui-button-danger button[disabled] {
   background-color: #f14668;
   border-color: #f14668;
   box-shadow: none;
 }
 
 /* button variant link */
-:host .flui-button.flui-button-variant-link {
+.flui-button.flui-button-link button {
   background-color: transparent;
   border-color: transparent;
   color: #4a4a4a;
   text-decoration: underline;
 }
 
-:host .flui-button.flui-button-variant-link:hover,
-:host .flui-button.flui-button-variant-link:focus {
+.flui-button.flui-button-link button:hover,
+.flui-button.flui-button-link button:focus {
   background-color: whitesmoke;
   color: #363636;
 }
 
-:host .flui-button.flui-button-variant-link:active {
+.flui-button.flui-button-link button:active {
   background-color: #e8e8e8;
   color: #363636;
 }
 
-:host .flui-button.flui-button-variant-link[disabled] {
+.flui-button.flui-button-link button[disabled] {
   background-color: transparent;
   border-color: transparent;
   box-shadow: none;
 }
 
-:host .flui-button.flui-rounded {
+.flui-button.flui-rounded button {
   border-radius: 999px;
 }
 
-:host .flui-button.flui-disabled {
+.flui-button.flui-disabled button {
   opacity: 0.5;
   cursor: not-allowed;
 }

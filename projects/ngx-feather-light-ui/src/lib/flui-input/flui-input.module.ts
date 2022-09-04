@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { FluiInputComponent } from './flui-input.component';
-import {FluiSharedModule} from "../modules/flui-shared/flui-shared.module";
+import { FluiInput } from './flui-input';
+import { FluiSharedModule } from "../common/flui-shared.module";
 
 @NgModule({
-  declarations: [
-    FluiInputComponent
-  ],
   imports: [
     FluiSharedModule
   ],
   exports: [
-    FluiInputComponent
-  ]
+    FluiInput
+  ],
+  declarations: [
+    FluiInput
+  ],
 })
 export class FluiInputModule { }

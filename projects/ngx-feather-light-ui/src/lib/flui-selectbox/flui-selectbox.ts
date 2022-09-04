@@ -1,30 +1,21 @@
-import {Component, EventEmitter, Input, OnInit, Optional, Output, Self} from '@angular/core';
-import {NgControl} from "@angular/forms";
-import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
+import { Component, EventEmitter, Input, Optional, Output, Self } from '@angular/core';
+import { NgControl } from "@angular/forms";
+import { FluiControlValueAccessor } from "../common/flui-control-value-accessor";
 
 @Component({
   selector: 'flui-selectbox',
-  templateUrl: './flui-selectbox.component.html',
-  styleUrls: ['./flui-selectbox.component.css']
+  templateUrl: './flui-selectbox.html',
+  styleUrls: ['./flui-selectbox.css']
 })
-export class FluiSelectboxComponent extends FluiControlValueAccessor {
+export class FluiSelectbox extends FluiControlValueAccessor {
 
-  private uniqueIdentifier = `flui-control-${new Date().getTime().toString()}`;
+  private uniqueIdentifier = `flui-select-${Math.random().toString().substring(2, 6)}`;
 
-  @Input()
-  id: string = this.uniqueIdentifier;
+  @Input() id: string = this.uniqueIdentifier;
 
-  @Input()
-  name: string = this.uniqueIdentifier;
+  @Input() name: string = this.uniqueIdentifier;
 
-  @Input()
-  get label(): string | undefined {
-    return this._label;
-  }
-  set label(label: string | undefined ) {
-    this._label = label;
-  }
-  private _label?: string | undefined;
+  @Input() label?: string;
 
   @Input()
   get options(): any[] {
@@ -37,17 +28,13 @@ export class FluiSelectboxComponent extends FluiControlValueAccessor {
 
   @Input() selected: any = null;
 
-  @Input()
-  errorMessages: string[] = [];
+  @Input() errorMessages: string[] = [];
 
-  @Input()
-  required: boolean = false;
+  @Input() required: boolean = false;
 
-  @Input()
-  disabled: boolean = false;
+  @Input() disabled: boolean = false;
 
-  @Output()
-  isSelectChanged: EventEmitter<any> = new EventEmitter<any>();
+  @Output() isSelectChanged: EventEmitter<any> = new EventEmitter<any>();
 
   public errors: string[] = [];
 
@@ -93,13 +80,13 @@ export class FluiSelectboxComponent extends FluiControlValueAccessor {
   }
 
   get selectboxClasses() {
-    let inputClasses: any = {
+    let selectClasses: any = {
       'flui-selectbox-wrap': true,
       'flui-disabled': this.disabled,
       'flui-invalid': this.errorState
     }
 
-    return inputClasses;
+    return selectClasses;
   }
 
 }

@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FluiRadioComponent } from './flui-radio.component';
-import {FluiSharedModule} from "../modules/flui-shared/flui-shared.module";
-
-
+import { FluiRadio } from './flui-radio';
+import { FluiSharedModule } from "../common/flui-shared.module";
 
 @NgModule({
-  declarations: [
-    FluiRadioComponent
-  ],
   imports: [
     FluiSharedModule
   ],
   exports: [
-    FluiRadioComponent
-  ]
+    FluiRadio
+  ],
+  declarations: [
+    FluiRadio
+  ],
 })
 export class FluiRadioModule { }

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { FluiCheckboxComponent } from './flui-checkbox.component';
-import { FluiSharedModule } from "../modules/flui-shared/flui-shared.module";
+import { FluiCheckbox } from './flui-checkbox';
+import { FluiSharedModule } from "../common/flui-shared.module";
 
 @NgModule({
-  declarations: [
-    FluiCheckboxComponent
-  ],
   imports: [
     FluiSharedModule
   ],
   exports: [
-    FluiCheckboxComponent
-  ]
+    FluiCheckbox
+  ],
+  declarations: [
+    FluiCheckbox
+  ],
 })
 export class FluiCheckboxModule { }

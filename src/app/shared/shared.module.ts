@@ -8,40 +8,33 @@ import { FluiCheckboxModule } from "../../../projects/ngx-feather-light-ui/src/l
 import { FluiTextareaModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-textarea/flui-textarea.module";
 import { FluiSelectboxModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-selectbox/flui-selectbox.module";
 import { FluiRadioModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-radio/flui-radio.module";
+import { FluiCardModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-card/flui-card.module";
+import { FluiAlertModule } from "../../../projects/ngx-feather-light-ui/src/lib/flui-alert/flui-alert.module";
 
-import {
-  FluiCardDirective,
-  FluiCardHeaderDirective
-} from "../../../projects/ngx-feather-light-ui/src/lib/flui-directives/flui-card.directive";
+const FLUI_MODULES = [
+  FluiInputModule,
+  FluiButtonModule,
+  FluiCheckboxModule,
+  FluiTextareaModule,
+  FluiSelectboxModule,
+  FluiRadioModule,
+  FluiCardModule,
+  FluiAlertModule
+]
 
 @NgModule({
-  declarations: [
-    FluiCardDirective,
-    FluiCardHeaderDirective,
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FluiInputModule,
-    FluiButtonModule,
-    FluiCheckboxModule,
-    FluiTextareaModule,
-    FluiSelectboxModule,
-    FluiRadioModule,
+    FLUI_MODULES
   ],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FluiInputModule,
-    FluiButtonModule,
-    FluiCheckboxModule,
-    FluiTextareaModule,
-    FluiSelectboxModule,
-    FluiRadioModule,
-    FluiCardDirective,
-    FluiCardHeaderDirective
+    FLUI_MODULES
   ]
 })
 export class SharedModule { }

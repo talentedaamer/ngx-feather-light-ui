@@ -25,7 +25,7 @@ export class RadioComponent {
 
   fakeForm = this._formBuilder.group({
     favFood: ['', Validators.required],
-    disabled: [''],
+    disabled: [{ value: '', disabled: true}]
   })
 
   constructor(
@@ -38,4 +38,7 @@ export class RadioComponent {
     console.log('>> fakeform value', this.fakeForm.value);
   }
 
+  get formValidity(): any {
+    return this.fakeForm.valid ? 'success' : 'danger';
+  }
 }

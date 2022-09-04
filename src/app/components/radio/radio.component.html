@@ -1,30 +1,40 @@
-<div fluiCard [formGroup]="fakeForm">
-  <h3 fluiCardHeader>Radio Control</h3>
-  <flui-radio
-    name="favFood"
-    label="Burger"
-    radioValue="burger"
-    formControlName="favFood"></flui-radio>
-  <flui-radio
-    name="favFood"
-    label="Pizza"
-    radioValue="pizza"
-    formControlName="favFood"></flui-radio>
+<flui-card [formGroup]="fakeForm">
+  <flui-card-header>
+    <flui-card-title>Radio Button Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
 
-  <flui-radio
-    name="disabled"
-    label="disabled"
-    radioValue="disabled"
-    formControlName="disabled"></flui-radio>
+    <flui-radio
+      name="favFood"
+      label="Burger"
+      radioValue="burger"
+      formControlName="favFood"></flui-radio>
+    <flui-radio
+      name="favFood"
+      label="Pizza"
+      radioValue="pizza"
+      formControlName="favFood"></flui-radio>
 
-  <flui-button
-    variant="primary"
-    [disabled]="!fakeForm.valid"
-    (isClicked)="isBtnClicked($event)"
-    text="Register"></flui-button>
-</div>
+    <flui-radio
+      name="disabled"
+      label="disabled"
+      radioValue="disabled"
+      formControlName="disabled"></flui-radio>
 
-<div fluiCard>
+  </flui-card-content>
+
+  <flui-card-actions>
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+
+  </flui-card-actions>
+</flui-card>
+
+<flui-alert>
   <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
-  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
-</div>
+</flui-alert>
+
+<flui-alert [variant]="formValidity">Form Valid => {{ fakeForm.valid | json }}</flui-alert>

@@ -3,27 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from "../components/dashboard/dashboard.component";
 import { InputComponent } from "../components/input/input.component";
-import {ButtonComponent} from "../components/button/button.component";
-import {TextareaComponent} from "../components/textarea/textarea.component";
-import {CheckboxComponent} from "../components/checkbox/checkbox.component";
-import {RadioComponent} from "../components/radio/radio.component";
-import {SelectboxComponent} from "../components/selectbox/selectbox.component";
-import {AlertComponent} from "../components/alert/alert.component";
+import { ButtonComponent } from "../components/button/button.component";
+import { TextareaComponent } from "../components/textarea/textarea.component";
+import { CheckboxComponent } from "../components/checkbox/checkbox.component";
+import { RadioComponent } from "../components/radio/radio.component";
+import { SelectboxComponent } from "../components/selectbox/selectbox.component";
+import { AlertComponent } from "../components/alert/alert.component";
+import { CardComponent } from "../components/card/card.component";
 
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    data: {
-      title: 'Dashboard'
-    }
+    component: DashboardComponent
   },
   {
     path: 'button',
-    component: ButtonComponent,
-    data: {
-      title: 'Button'
-    }
+    component: ButtonComponent
   },
   {
     path: 'input',
@@ -48,6 +43,10 @@ const routes: Routes = [
   {
     path: 'alert',
     component: AlertComponent
+  },
+  {
+    path: 'card',
+    component: CardComponent
   }
 ];
 

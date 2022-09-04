@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FluiTextareaComponent } from './flui-textarea.component';
-import {FluiSharedModule} from "../modules/flui-shared/flui-shared.module";
-
-
+import { FluiTextarea } from './flui-textarea';
+import { FluiSharedModule } from "../common/flui-shared.module";
 
 @NgModule({
-  declarations: [
-    FluiTextareaComponent
-  ],
   imports: [
-    CommonModule,
     FluiSharedModule,
   ],
   exports: [
-    FluiTextareaComponent
-  ]
+    FluiTextarea
+  ],
+  declarations: [
+    FluiTextarea
+  ],
 })
 export class FluiTextareaModule { }

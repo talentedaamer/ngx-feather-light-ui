@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FluiButtonComponent } from './flui-button.component';
+import { FluiButton } from './flui-button';
 
-describe('FluiButtonComponent', () => {
-  let component: FluiButtonComponent;
-  let fixture: ComponentFixture<FluiButtonComponent>;
+describe('FluiButton', () => {
+  let component: FluiButton;
+  let fixture: ComponentFixture<FluiButton>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FluiButtonComponent ]
+      declarations: [ FluiButton ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FluiButtonComponent);
+    fixture = TestBed.createComponent(FluiButton);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

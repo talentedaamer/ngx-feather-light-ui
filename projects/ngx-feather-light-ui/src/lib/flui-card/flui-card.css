@@ -1,0 +1,48 @@
+.flui-card {
+  display: block;
+  background: #ffffff;
+  border-radius: .375rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 1em -0.125em rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
+.flui-card-header,
+.flui-card-header h1,
+.flui-card-header h2,
+.flui-card-header h3,
+.flui-card-header h4,
+.flui-card-header h5,
+.flui-card-header h6,
+.flui-card-header p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.flui-card-header {
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.flui-card-content {
+  display: block;
+}
+
+.flui-card-actions {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+.flui-card-actions-align-start {
+  justify-content: start;
+}
+.flui-card-actions-align-center {
+  justify-content: center;
+}
+.flui-card-actions-align-end {
+  justify-content: end;
+}
+.flui-card-actions flui-button:not(:last-child) {
+  margin-right: .5rem;
+}

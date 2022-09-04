@@ -1,27 +1,34 @@
-<div fluiCard [formGroup]="fakeForm">
-  <h3 fluiCardHeader>Checkbox Control</h3>
-  <flui-checkbox
-    [label]="label"
-    [labelPosition]="labelPosition"
-    formControlName="activeProfile"></flui-checkbox>
+<flui-card [formGroup]="fakeForm">
+  <flui-card-header>
+    <flui-card-title>Checkbox Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
+    <flui-checkbox
+      [label]="label"
+      [labelPosition]="labelPosition"
+      formControlName="activeProfile"></flui-checkbox>
 
-  <flui-checkbox
-    labelPosition="left"
-    label="Label Left"></flui-checkbox>
+    <flui-checkbox
+      labelPosition="left"
+      label="Label Left"></flui-checkbox>
 
-  <flui-checkbox
-    label="Remember Password"
-    formControlName="rememberPassword"
-    [disabled]="true"></flui-checkbox>
+    <flui-checkbox
+      label="Remember Password"
+      formControlName="rememberPassword"
+      [disabled]="true"></flui-checkbox>
+  </flui-card-content>
 
-  <flui-button
-    variant="primary"
-    [disabled]="!fakeForm.valid"
-    (isClicked)="isBtnClicked($event)"
-    text="Register"></flui-button>
-</div>
+  <flui-card-actions>
+    <flui-button
+      variant="primary"
+      [disabled]="!fakeForm.valid"
+      (isClicked)="isBtnClicked($event)"
+      text="Register"></flui-button>
+  </flui-card-actions>
+</flui-card>
 
-<div fluiCard>
+<flui-alert>
   <pre style="margin: 0">value => {{ fakeForm.value | json }}</pre>
-  <pre style="margin-bottom: 0">Valid => {{ fakeForm.valid | json }}</pre>
-</div>
+</flui-alert>
+
+<flui-alert [variant]="formValidity">Form Valid => {{ fakeForm.valid | json }}</flui-alert>

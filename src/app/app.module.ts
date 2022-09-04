@@ -11,7 +11,7 @@ import { SidebarModule } from "./shared/sidebar.module";
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutAdminComponent
+    LayoutAdminComponent,
   ],
   imports: [
     SharedModule,

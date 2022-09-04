@@ -1,110 +1,117 @@
-<div fluiCard>
-  <h3 fluiCardHeader>Button Default</h3>
-  <flui-button
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
 
-<div fluiCard>
-  <h3 fluiCardHeader>Button Primary</h3>
-  <flui-button
-    variant="primary"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="primary"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
+<flui-card>
+  <flui-card-header>
+    <flui-card-title>Button Component</flui-card-title>
+  </flui-card-header>
+  <flui-card-content>
 
-<div fluiCard>
-  <h3 fluiCardHeader>Button Light</h3>
-  <flui-button
-    variant="light"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="light"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
+    <div>
+      <h3>Button Variants</h3>
+      <flui-button
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="light"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="dark"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="primary"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="success"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="danger"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="link"
+        (isClicked)="isBtnClicked($event)"
+        text="Link"></flui-button>
+    </div>
+    <div>
+      <h3>Button Disabled</h3>
+      <flui-button
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="light"
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="dark"
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="primary"
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="success"
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        [disabled]="true"
+        variant="danger"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="link"
+        [disabled]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Link"></flui-button>
+    </div>
+    <div>
+      <h3>Button Rounded</h3>
+      <flui-button
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="light"
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="dark"
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="primary"
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="success"
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        [rounded]="true"
+        variant="danger"
+        (isClicked)="isBtnClicked($event)"
+        text="Button"></flui-button>
+      <flui-button
+        variant="link"
+        [rounded]="true"
+        (isClicked)="isBtnClicked($event)"
+        text="Link"></flui-button>
+    </div>
 
-<div fluiCard>
-  <h3 fluiCardHeader>Button Dark</h3>
-  <flui-button
-    variant="dark"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="dark"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
+  </flui-card-content>
+</flui-card>
 
 
-<div fluiCard>
-  <h3 fluiCardHeader>Button Success</h3>
-  <flui-button
-    variant="success"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="success"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
 
-<div fluiCard>
-  <h3 fluiCardHeader>Button Danger</h3>
-  <flui-button
-    variant="danger"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="danger"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
-
-<div fluiCard>
-  <h3 fluiCardHeader>Button Rounded</h3>
-  <flui-button
-    variant="primary"
-    [rounded]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    variant="success"
-    [rounded]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-  <flui-button
-    [rounded]="true"
-    variant="danger"
-    (isClicked)="isBtnClicked($event)"
-    text="Button"></flui-button>
-</div>
-
-<div fluiCard>
-  <h3 fluiCardHeader>Button Link</h3>
-  <flui-button
-    style="margin-right: .875rem; margin-bottom: 0"
-    variant="link"
-    (isClicked)="isBtnClicked($event)"
-    text="Link"></flui-button>
-  <flui-button
-    style="margin-bottom: 0"
-    variant="link"
-    [disabled]="true"
-    (isClicked)="isBtnClicked($event)"
-    text="Link"></flui-button>
-</div>

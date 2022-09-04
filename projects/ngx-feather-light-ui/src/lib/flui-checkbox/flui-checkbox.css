@@ -7,6 +7,7 @@
   display: inline-block;
   cursor: pointer;
   margin-bottom: 1rem;
+  line-height: 1;
 }
 :host .flui-checkbox input {
   position: absolute;
@@ -63,8 +64,14 @@
   display: block;
 }
 
+:host .flui-checkbox.flui-invalid label {
+  color: #f14668;
+}
 :host .flui-checkbox.flui-invalid .flui-checkmark {
   border-color: #f14668;
+}
+:host .flui-checkbox.flui-invalid:hover input ~ .flui-checkmark {
+  background: rgba(247,70,104,.3);
 }
 
 :host .flui-checkbox input:disabled ~ .flui-checkmark {

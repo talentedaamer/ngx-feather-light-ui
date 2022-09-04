@@ -57,4 +57,11 @@ export class SelectboxComponent {
     console.log('>> fakeform value', this.fakeForm.value);
   }
 
+  get formValidity(): any {
+    return this.fakeForm.valid ? 'success' : 'danger';
+  }
+
+  get formTouched(): any {
+    return this.fakeForm.touched ? 'warning' : 'default';
+  }
 }

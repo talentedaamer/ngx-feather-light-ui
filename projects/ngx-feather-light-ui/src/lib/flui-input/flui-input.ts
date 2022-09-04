@@ -4,57 +4,46 @@ import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
 
 const CUI_INPUT_CONTROL_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => FluiInputComponent),
+  useExisting: forwardRef(() => FluiInput),
   multi: true
 };
 
 @Component({
   selector: 'flui-input',
-  templateUrl: './flui-input.component.html',
-  styleUrls: ['./flui-input.component.css'],
+  templateUrl: './flui-input.html',
+  styleUrls: ['./flui-input.css'],
   providers: [
     // CUI_INPUT_CONTROL_VALUE_ACCESSOR
   ]
 })
-export class FluiInputComponent extends FluiControlValueAccessor {
+export class FluiInput extends FluiControlValueAccessor {
 
-  private uniqueIdentifier = `flui-control-${new Date().getTime().toString()}`;
+  private uniqueIdentifier = `flui-input-${Math.random().toString().substring(2, 6)}`;
 
-  @Input()
-  id: string = this.uniqueIdentifier;
+  @Input() id: string = this.uniqueIdentifier;
 
-  @Input()
-  name: string = this.uniqueIdentifier;
+  @Input() name: string = this.uniqueIdentifier;
 
-  @Input()
-  type: string = 'text';
+  @Input() type: string = 'text';
 
-  @Input()
-  get label(): string | undefined {
-    return this._label;
-  }
-  set label(label: string | undefined ) {
-    this._label = label;
-  }
-  private _label?: string | undefined;
+  @Input() label?: string;
 
-  @Input()
-  get placeholder(): string | undefined {
-    return this._placeholder;
-  }
-  set placeholder(placeholder: string | undefined ) {
-    this._placeholder = placeholder;
-  }
-  private _placeholder?: string | undefined;
+  @Input() placeholder?: string;
 
-  @Input()
-  errorMessages: string[] = [];
+  // @Input()
+  // get placeholder(): string | undefined {
+  //   return this._placeholder;
+  // }
+  // set placeholder(placeholder: string | undefined ) {
+  //   this._placeholder = placeholder;
+  // }
+  // private _placeholder?: string | undefined;
 
-  @Input()
-  required: boolean = false;
+  @Input() errorMessages: string[] = [];
 
-  @Input()
-  disabled: boolean = false;
+  @Input() required: boolean = false;
+
+  @Input() disabled: boolean = false;
 
   public errors: string[] = [];
 
