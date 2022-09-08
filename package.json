@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildLibrary": "ng build ngx-feather-light-ui --configuration production",
+    "installLib": "npm install ngx-feather-light-ui --save",
+    "uninstallLib": "npm uninstall ngx-feather-light-ui --save",
+    "buildLib": "ng build ngx-feather-light-ui --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -19,6 +21,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "ngx-feather-light-ui": "^1.8.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

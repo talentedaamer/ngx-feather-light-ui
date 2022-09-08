@@ -39,6 +39,10 @@ export class SidebarComponent implements OnInit {
     {
       link: 'card',
       title: 'Card'
+    },
+    {
+      link: 'form-login',
+      title: 'Form Login'
     }
   ]
   constructor() { }

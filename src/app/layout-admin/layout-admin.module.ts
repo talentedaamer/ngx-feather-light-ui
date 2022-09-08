@@ -12,6 +12,7 @@ import { SelectboxComponent } from '../components/selectbox/selectbox.component'
 import { RadioComponent } from '../components/radio/radio.component';
 import { AlertComponent } from '../components/alert/alert.component';
 import { CardComponent } from "../components/card/card.component";
+import { FormLoginComponent } from "../components/form-login/form-login.component";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CardComponent } from "../components/card/card.component";
     RadioComponent,
     AlertComponent,
     CardComponent,
+    FormLoginComponent
   ],
   imports: [
     CommonModule,

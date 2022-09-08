@@ -1,0 +1,55 @@
+
+<div class="app-login-form-container" [formGroup]="formLogin">
+  <flui-card>
+
+    <flui-card-header>
+      <h3 flui-card-title>Login</h3>
+    </flui-card-header>
+
+    <flui-card-content>
+      <flui-input
+        label="Username"
+        placeholder="Enter Username"
+        [errorMessages]="errorMessages"
+        formControlName="username"></flui-input>
+
+      <flui-input
+        label="Password"
+        placeholder="Enter Password"
+        type="password"
+        [errorMessages]="errorMessages"
+        formControlName="password"></flui-input>
+
+      <flui-checkbox
+        label="Remember Password?"
+        formControlName="remember"></flui-checkbox>
+
+      <flui-radio
+        label="Male"
+        name="gender"
+        radioValue="male"
+        formControlName="gender"
+        (isRadioChanged)="isGenderChanged()"></flui-radio>
+      <flui-radio
+        label="Female"
+        name="gender"
+        radioValue="female"
+        formControlName="gender"
+        (isRadioChanged)="isGenderChanged()"></flui-radio>
+
+      <flui-input
+        label="Phone"
+        placeholder="Enter Phone Number.."
+        [errorMessages]="errorMessages"
+        formControlName="phone"></flui-input>
+
+    </flui-card-content>
+
+    <flui-card-actions>
+      <flui-button
+        variant="primary"
+        [disabled]="!formLogin.valid"
+        text="Login"></flui-button>
+    </flui-card-actions>
+  </flui-card>
+</div>
