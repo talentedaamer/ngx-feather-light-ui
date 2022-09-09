@@ -6,38 +6,38 @@ NGX Feather Light UI is an Angular lightweight simple yet powerful UI library. C
 Library contains following components that can be used stand alone or with template driven or reactive forms.
 
 ### Buttons Component
-![Button Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-1.PNG)
+![Button Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-1.PNG?token=GHSAT0AAAAAABX4OIRC67UOBYB5PGMD2R66YY3DOXQ)
 
 `<flui-button></flui-button>`
 ### Input Component
-![Input Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-2.PNG)
+![Input Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-2.PNG?token=GHSAT0AAAAAABX4OIRDSEZO73K6JMHI2WDWYY3DPLA)
 
 `<flui-input></flui-input>`
 ### Textarea Component
-![Textarea Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-3.PNG)
+![Textarea Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-3.PNG?token=GHSAT0AAAAAABX4OIRCACSMPMCOT4FFYATCYY3DPQA)
 
 `<flui-textarea></flui-textarea>`
 ### Checkbox Component
-![Checkbox Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-4.PNG)
+![Checkbox Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-4.PNG?token=GHSAT0AAAAAABX4OIRDOTIBCVT5Y2OAINL4YY3DQSQ)
 
 `<flui-checkbox></flui-checkbox>`
 ### Radio Button Component
-![Radio Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-5.PNG)
+![Radio Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-5.PNG?token=GHSAT0AAAAAABX4OIRCYJXMX7NXWO5GEXL2YY3DRNQ)
 
 `<flui-radio></flui-radio>`
 ### Selectbox Component
-![Select Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-6.PNG)
+![Select Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-6.PNG?token=GHSAT0AAAAAABX4OIRDFTKEVWIOOFAHJANKYY3DRWA)
 
 `<flui-selectbox></flui-selectbox>`
 ### Alert Component
-![Alert Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-7.PNG)
+![Alert Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-7.PNG?token=GHSAT0AAAAAABX4OIRCKCBYDTWJMOFA6EK4YY3DSAQ)
 
 `<flui-alert></flui-alert>`
 ### Card Component
-![Card Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-8.PNG)
+![Card Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-8.PNG?token=GHSAT0AAAAAABX4OIRC2GNXQOGSZVPLLREMYY3DTIQ)
 
 `<flui-card></flui-card>`
 
 ### Login form using Different Components
-![Components](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-9.PNG)
+![Login Form](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-9.PNG?token=GHSAT0AAAAAABX4OIRDTXX6SCKTKF2C65RWYY3DTOA)
 
