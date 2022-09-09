@@ -6,15 +6,15 @@ NGX Feather Light UI is an Angular lightweight simple yet powerful UI library. C
 Library contains following components that can be used stand alone or with template driven or reactive forms.
 
 ### Buttons Component
-![Button Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-1.PNG?token=GHSAT0AAAAAABX4OIRC67UOBYB5PGMD2R66YY3DOXQ)
+![Button Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-1.PNG?token=GHSAT0AAAAAABX4OIRCBT5ETZ5ETKQ74NF2YY3DU7Q)
 
 `<flui-button></flui-button>`
 ### Input Component
-![Input Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-2.PNG?token=GHSAT0AAAAAABX4OIRDSEZO73K6JMHI2WDWYY3DPLA)
+![Input Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-2.PNG?token=GHSAT0AAAAAABX4OIRDZS5TN4QQEDW7PBCUYY3DVXA)
 
 `<flui-input></flui-input>`
 ### Textarea Component
-![Textarea Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-3.PNG?token=GHSAT0AAAAAABX4OIRCACSMPMCOT4FFYATCYY3DPQA)
+![Textarea Component](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-3.PNG?token=GHSAT0AAAAAABX4OIRD4SPVPSGP3ITDQGVGYY3DWAA)
 
 `<flui-textarea></flui-textarea>`
 ### Checkbox Component
