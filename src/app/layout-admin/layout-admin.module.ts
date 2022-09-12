@@ -13,6 +13,7 @@ import { RadioComponent } from '../components/radio/radio.component';
 import { AlertComponent } from '../components/alert/alert.component';
 import { CardComponent } from "../components/card/card.component";
 import { FormLoginComponent } from "../components/form-login/form-login.component";
+import { FormRegisterComponent } from '../components/form-register/form-register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormLoginComponent } from "../components/form-login/form-login.componen
     RadioComponent,
     AlertComponent,
     CardComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    FormRegisterComponent
   ],
   imports: [
     CommonModule,

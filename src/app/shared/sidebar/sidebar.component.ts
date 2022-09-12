@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  navLinks = [
+  componentsLinks = [
     {
       link: 'button',
       title: 'Button'
@@ -39,10 +39,16 @@ export class SidebarComponent implements OnInit {
     {
       link: 'card',
       title: 'Card'
-    },
+    }
+  ]
+  formPagesLinks = [
     {
       link: 'form-login',
       title: 'Form Login'
+    },
+    {
+      link: 'form-register',
+      title: 'Form Register'
     }
   ]
   constructor() { }

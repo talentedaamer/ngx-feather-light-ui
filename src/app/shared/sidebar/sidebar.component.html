@@ -4,8 +4,14 @@
 
 <nav class="app-sidenav">
   <p class="nav-group">Components</p>
-  <ul class="nav-list" *ngIf="navLinks.length > 0">
-    <li *ngFor="let link of navLinks">
+  <ul class="nav-list" *ngIf="componentsLinks.length > 0">
+    <li *ngFor="let link of componentsLinks">
+      <a [routerLink]="link.link" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact:true}">{{link.title}}</a>
+    </li>
+  </ul>
+  <p class="nav-group">Forms</p>
+  <ul class="nav-list" *ngIf="formPagesLinks.length > 0">
+    <li *ngFor="let link of formPagesLinks">
       <a [routerLink]="link.link" routerLinkActive="nav-active" [routerLinkActiveOptions]="{exact:true}">{{link.title}}</a>
     </li>
   </ul>

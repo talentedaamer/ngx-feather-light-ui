@@ -11,6 +11,7 @@ import { SelectboxComponent } from "../components/selectbox/selectbox.component"
 import { AlertComponent } from "../components/alert/alert.component";
 import { CardComponent } from "../components/card/card.component";
 import { FormLoginComponent } from "../components/form-login/form-login.component";
+import {FormRegisterComponent} from "../components/form-register/form-register.component";
 
 const routes: Routes = [
   {
@@ -52,6 +53,11 @@ const routes: Routes = [
   {
     path: 'form-login',
     component: FormLoginComponent
+  }
+  ,
+  {
+    path: 'form-register',
+    component: FormRegisterComponent
   }
 ];
 
