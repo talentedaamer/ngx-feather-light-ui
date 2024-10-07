@@ -11,7 +11,6 @@ NGX Feather Light UI is a lightweight and simple yet powerful UI library for Ang
 * Responsive and accessible components for a seamless user experience.
 
 ### ***View Demo [Components & Documentation](https://talentedaamer.github.io/ngx-feather-light-ui/)***
-https://www.npmjs.com/package/ngx-feather-light-ui
 
 ## Installation
 Install NGX Feather Light UI using npm. ***view [package on npmjs](https://www.npmjs.com/package/ngx-feather-light-ui)***
@@ -75,3 +74,17 @@ The library contains the following components that can be used standalone or wit
 ### Login form using Different Components
 ![Login Form](https://raw.githubusercontent.com/talentedaamer/ngx-feather-light-ui/master/screenshots/screenshot-9.PNG?token=GHSAT0AAAAAABX4OIRDTXX6SCKTKF2C65RWYY3DTOA)
 
+## Changelog
+
+***(1.0.1)***
+* Initial Release
+
+## Author
+
+***[Aamer Shahzad](https://talentedaamer.github.io/) <talentedaamer@gmail.com>***
+
+## Copyright and license
+
+Copyright (C) 2024 NGX Feather Light UI
+
+Licensed under [MIT license](LICENSE).
