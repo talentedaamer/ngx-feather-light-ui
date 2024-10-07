@@ -8,6 +8,8 @@
   padding: .5rem 1rem;
   text-align: center;
   white-space: nowrap;
+
+  transition: all 0.3s;
 }
 .flui-button button:hover {
   border-color: #b5b5b5;

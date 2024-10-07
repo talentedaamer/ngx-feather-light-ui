@@ -27,6 +27,8 @@
   font-size: 1rem;
   line-height: 1.5;
   vertical-align: top;
+
+  transition: all 0.3s;
 }
 
 :host .flui-selectbox-wrap > select:hover {

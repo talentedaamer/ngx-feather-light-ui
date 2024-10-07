@@ -39,9 +39,11 @@ export class SidebarComponent implements OnInit {
     {
       link: 'card',
       title: 'Card'
-    }
-  ]
-  formPagesLinks = [
+    },
+    {
+      title: 'Components',
+      heading: true,
+    },
     {
       link: 'form-login',
       title: 'Form Login'
@@ -51,6 +53,7 @@ export class SidebarComponent implements OnInit {
       title: 'Form Register'
     }
   ]
+
   constructor() { }
 
   ngOnInit(): void {

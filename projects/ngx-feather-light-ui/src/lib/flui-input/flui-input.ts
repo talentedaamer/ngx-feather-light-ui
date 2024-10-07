@@ -1,49 +1,40 @@
-import {Component, forwardRef, Input, Optional, Self} from '@angular/core';
-import {NG_VALUE_ACCESSOR, NgControl} from "@angular/forms";
+import {Component, Input, Optional, Self} from '@angular/core';
+import {NgControl} from "@angular/forms";
 import {FluiControlValueAccessor} from "../common/flui-control-value-accessor";
-
-const CUI_INPUT_CONTROL_VALUE_ACCESSOR = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => FluiInput),
-  multi: true
-};
 
 @Component({
   selector: 'flui-input',
   templateUrl: './flui-input.html',
   styleUrls: ['./flui-input.css'],
-  providers: [
-    // CUI_INPUT_CONTROL_VALUE_ACCESSOR
-  ]
 })
 export class FluiInput extends FluiControlValueAccessor {
 
   private uniqueIdentifier = `flui-input-${Math.random().toString().substring(2, 6)}`;
 
-  @Input() id: string = this.uniqueIdentifier;
+  @Input()
+  id: string = this.uniqueIdentifier;
 
-  @Input() name: string = this.uniqueIdentifier;
+  @Input()
+  name: string = this.uniqueIdentifier;
 
-  @Input() type: string = 'text';
+  @Input()
+  type: string = 'text';
 
-  @Input() label?: string;
+  @Input()
+  label?: string;
 
-  @Input() placeholder?: string;
+  @Input()
+  placeholder?: string;
 
-  // @Input()
-  // get placeholder(): string | undefined {
-  //   return this._placeholder;
-  // }
-  // set placeholder(placeholder: string | undefined ) {
-  //   this._placeholder = placeholder;
-  // }
-  // private _placeholder?: string | undefined;
+  @Input()
+  errorMessages: string[] = [];
 
-  @Input() errorMessages: string[] = [];
+  @Input()
+  required: boolean = false;
 
-  @Input() required: boolean = false;
+  @Input()
+  disabled: boolean = false;
 
-  @Input() disabled: boolean = false;
 
   public errors: string[] = [];
 

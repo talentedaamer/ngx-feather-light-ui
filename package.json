@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=4455",
     "build": "ng build",
     "installLib": "npm install ngx-feather-light-ui --save",
     "uninstallLib": "npm uninstall ngx-feather-light-ui --save",
@@ -37,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "lite-server": "^2.6.1",
     "ng-packagr": "^14.0.0",
     "typescript": "~4.7.2"
   }

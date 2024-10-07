@@ -18,7 +18,7 @@ export class InputComponent {
     firstName: ['Muhammad', Validators.required ],
     lastName: ['Ibrahim'],
     email: ['', [Validators.email, Validators.required]],
-    password: ['password'],
+    password: ['Password'],
   })
 
   constructor(
