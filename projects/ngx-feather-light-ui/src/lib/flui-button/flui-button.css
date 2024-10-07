@@ -28,15 +28,6 @@
   border-color: #dbdbdb;
   box-shadow: none;
 }
-
-/*.flui-button button:focus:not(:active) {*/
-/*  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);*/
-/*}*/
-/*.flui-button button:active {*/
-/*  border-color: #4a4a4a;*/
-/*  color: #363636;*/
-/*}*/
-
 /* button primary */
 .flui-button.flui-button-primary button {
   background-color: #485fc7;
